@@ -1,6 +1,6 @@
 #  THIS IS THE TITLE
 
-App Introduction:
+## App Introduction:
 
 The application that we propose to develop is a simple stock trading mobile app that allows users to be able to create an account, and once logged in, be able to browse various stock markets, indices, currencies and more. Also, we hope to be able to incorporate a stock portfolio, allowing the user to visualize and organize their holdings. 
 
@@ -18,7 +18,7 @@ For now we are going to try to implement these functionalities in our MVP as we 
 ** Functionality subject to change **
 
 
-Work Distribution
+## Work Distribution
 
 Since we are in the early stages of project development, and our group was very recently made, our job duties are still pretty vague as we analyze detailed requirements for our project. For now we have three main modules to assign to team members, these include: UI, backend/database, and API connection. 
 
