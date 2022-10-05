@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58ED8EAD28EE0932007555B6 /* StockTradingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingAppApp.swift */; };
+		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EAF28EE0932007555B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAE28EE0932007555B6 /* ContentView.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		58ED8EAC28EE0932007555B6 /* StockTradingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingAppApp.swift; sourceTree = "<group>"; };
+		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EAE28EE0932007555B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		58ED8EAB28EE0932007555B6 /* StockTradingApp */ = {
 			isa = PBXGroup;
 			children = (
-				58ED8EAC28EE0932007555B6 /* StockTradingAppApp.swift */,
+				58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */,
 				58ED8EAE28EE0932007555B6 /* ContentView.swift */,
 				58ED8EB028EE0932007555B6 /* Assets.xcassets */,
 				58ED8EB228EE0932007555B6 /* Preview Content */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ED8EAF28EE0932007555B6 /* ContentView.swift in Sources */,
-				58ED8EAD28EE0932007555B6 /* StockTradingAppApp.swift in Sources */,
+				58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +277,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +307,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
