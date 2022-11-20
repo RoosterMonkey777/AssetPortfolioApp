@@ -14,6 +14,11 @@
 		588598E72929D52A006FC002 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E62929D52A006FC002 /* FirebaseFirestore */; };
 		588598E9292AABB0006FC002 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598E8292AABB0006FC002 /* AuthenticatedView.swift */; };
 		588598EB292AAC47006FC002 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598EA292AAC47006FC002 /* HomePageView.swift */; };
+		588598ED292AADE8006FC002 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */; };
+		588598EF292AAF5B006FC002 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598EE292AAF5B006FC002 /* AuthenticationView.swift */; };
+		588598F1292AAFFC006FC002 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F0292AAFFC006FC002 /* LoginView.swift */; };
+		588598F3292AB03B006FC002 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F2292AB03B006FC002 /* SignupView.swift */; };
+		588598F5292AB111006FC002 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F4292AB111006FC002 /* UserProfileView.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EAF28EE0932007555B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAE28EE0932007555B6 /* ContentView.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
@@ -24,6 +29,11 @@
 		588598DD2929D41E006FC002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		588598E8292AABB0006FC002 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		588598EA292AAC47006FC002 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		588598EE292AAF5B006FC002 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		588598F0292AAFFC006FC002 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		588598F2292AB03B006FC002 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		588598F4292AB111006FC002 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EAE28EE0932007555B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +84,11 @@
 				58ED8EB228EE0932007555B6 /* Preview Content */,
 				588598E8292AABB0006FC002 /* AuthenticatedView.swift */,
 				588598EA292AAC47006FC002 /* HomePageView.swift */,
+				588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */,
+				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
+				588598F0292AAFFC006FC002 /* LoginView.swift */,
+				588598F2292AB03B006FC002 /* SignupView.swift */,
+				588598F4292AB111006FC002 /* UserProfileView.swift */,
 			);
 			path = StockTradingApp;
 			sourceTree = "<group>";
@@ -167,6 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				58ED8EAF28EE0932007555B6 /* ContentView.swift in Sources */,
+				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
+				588598F1292AAFFC006FC002 /* LoginView.swift in Sources */,
+				588598ED292AADE8006FC002 /* AuthenticationViewModel.swift in Sources */,
+				588598EF292AAF5B006FC002 /* AuthenticationView.swift in Sources */,
+				588598F3292AB03B006FC002 /* SignupView.swift in Sources */,
 				588598E9292AABB0006FC002 /* AuthenticatedView.swift in Sources */,
 				588598EB292AAC47006FC002 /* HomePageView.swift in Sources */,
 				58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */,
