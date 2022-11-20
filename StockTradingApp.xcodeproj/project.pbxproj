@@ -20,7 +20,6 @@
 		588598F3292AB03B006FC002 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F2292AB03B006FC002 /* SignupView.swift */; };
 		588598F5292AB111006FC002 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F4292AB111006FC002 /* UserProfileView.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
-		58ED8EAF28EE0932007555B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAE28EE0932007555B6 /* ContentView.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		588598F4292AB111006FC002 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
-		58ED8EAE28EE0932007555B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58ED8EBA28EE0BCC007555B6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -57,6 +55,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		588598F6292ACF88006FC002 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				588598E8292AABB0006FC002 /* AuthenticatedView.swift */,
+				588598EA292AAC47006FC002 /* HomePageView.swift */,
+				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
+				588598F0292AAFFC006FC002 /* LoginView.swift */,
+				588598F2292AB03B006FC002 /* SignupView.swift */,
+				588598F4292AB111006FC002 /* UserProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		588598F7292ACF8E006FC002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		588598F8292ACF99006FC002 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		58ED8EA028EE0932007555B6 = {
 			isa = PBXGroup;
 			children = (
@@ -77,18 +103,13 @@
 		58ED8EAB28EE0932007555B6 /* StockTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				588598F8292ACF99006FC002 /* ViewModels */,
+				588598F7292ACF8E006FC002 /* Models */,
+				588598F6292ACF88006FC002 /* Views */,
 				58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */,
-				58ED8EAE28EE0932007555B6 /* ContentView.swift */,
 				58ED8EB028EE0932007555B6 /* Assets.xcassets */,
 				588598DD2929D41E006FC002 /* GoogleService-Info.plist */,
 				58ED8EB228EE0932007555B6 /* Preview Content */,
-				588598E8292AABB0006FC002 /* AuthenticatedView.swift */,
-				588598EA292AAC47006FC002 /* HomePageView.swift */,
-				588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */,
-				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
-				588598F0292AAFFC006FC002 /* LoginView.swift */,
-				588598F2292AB03B006FC002 /* SignupView.swift */,
-				588598F4292AB111006FC002 /* UserProfileView.swift */,
 			);
 			path = StockTradingApp;
 			sourceTree = "<group>";
@@ -181,7 +202,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58ED8EAF28EE0932007555B6 /* ContentView.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
 				588598F1292AAFFC006FC002 /* LoginView.swift in Sources */,
 				588598ED292AADE8006FC002 /* AuthenticationViewModel.swift in Sources */,

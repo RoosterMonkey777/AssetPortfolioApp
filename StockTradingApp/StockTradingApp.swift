@@ -25,20 +25,29 @@ struct StockTradingApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                // ContentView()
                 AuthenticatedView {
-                    Image(systemName: "number.circle.fill")
-                        .resizable()
-                        .frame(width: 100 , height: 100)
-                        .foregroundColor(Color(.systemPink))
-                        .aspectRatio(contentMode: .fit)
-                        .clipShape(Circle())
-                        .clipped()
-                        .padding(4)
-                        .overlay(Circle().stroke(Color.black, lineWidth: 2))
-                    Text("Welcome to My Portfolio")
-                        .font(.title)
-                    Text("Please log in to use the app!")
+                    VStack{
+                        Text("MY ASSET PORTFOLIO")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .padding(.vertical)
+                            .shadow(radius: 50.0)
+                        Image(systemName: "chart.line.uptrend.xyaxis")
+                            .resizable()
+                            .frame(width: 150, height: 150)
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color(.systemGreen))
+                            .clipShape(Circle())
+                            .clipped()
+                            .overlay(
+                                Circle().stroke(Color.green, lineWidth: 5)
+                                    .shadow(radius: 50))
+                    }
+                    .padding()
+                    Text("Track your favorite stocks, crypto and more!")
+                        .fontWeight(.regular)
+                        .shadow(radius: 50)
+                        .padding()
                 } content: {
                     HomePageView()
                     Spacer()

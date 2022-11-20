@@ -42,10 +42,12 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
         else {
           Text("You're not logged in.")
         }
-        Button("Tap here to log in") {
+        Button("Tap here to login") {
           viewModel.reset()
           presentingLoginScreen.toggle()
         }
+        .fontWeight(.bold)
+          
       }
       .sheet(isPresented: $presentingLoginScreen) {
         AuthenticationView()
