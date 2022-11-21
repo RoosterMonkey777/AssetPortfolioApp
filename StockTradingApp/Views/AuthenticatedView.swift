@@ -55,10 +55,12 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
       }
     case .authenticated:
       VStack {
-        content()
-        Text("You're logged in as \(viewModel.displayName).")
-        Button("Tap here to view your profile") {
-          presentingProfileScreen.toggle()
+          content()
+          Text("You're logged in as \(viewModel.displayName).")
+          Button("Tap here to view your profile") {
+            presentingProfileScreen.toggle()
+        
+        
         }
       }
       .sheet(isPresented: $presentingProfileScreen) {

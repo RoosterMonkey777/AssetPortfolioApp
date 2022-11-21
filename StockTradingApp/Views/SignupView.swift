@@ -27,13 +27,10 @@ struct SignupView: View {
       }
     }
   }
+    
 
   var body: some View {
     VStack {
-      Image("SignUp")
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(minHeight: 300, maxHeight: 400)
       Text("Sign up")
         .font(.largeTitle)
         .fontWeight(.bold)

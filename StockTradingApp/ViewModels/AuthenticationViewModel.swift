@@ -24,6 +24,7 @@ class AuthenticationViewModel: ObservableObject {
   @Published var email = ""
   @Published var password = ""
   @Published var confirmPassword = ""
+  
 
   @Published var flow: AuthenticationFlow = .login
 
@@ -102,6 +103,7 @@ extension AuthenticationViewModel {
   func signUpWithEmailPassword() async -> Bool {
     authenticationState = .authenticating
     do  {
+        
       try await Auth.auth().createUser(withEmail: email, password: password)
       return true
     }
@@ -112,6 +114,7 @@ extension AuthenticationViewModel {
       return false
     }
   }
+    
 
   func signOut() {
     do {
