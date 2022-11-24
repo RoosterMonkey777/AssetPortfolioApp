@@ -34,6 +34,7 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
 
   var body: some View {
     switch viewModel.authenticationState {
+    
     case .unauthenticated, .authenticating:
       VStack {
         if let unauthenticated {
@@ -53,14 +54,13 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
         AuthenticationView()
           .environmentObject(viewModel)
       }
+    
     case .authenticated:
       VStack {
           content()
           Text("You're logged in as \(viewModel.displayName).")
           Button("Tap here to view your profile") {
             presentingProfileScreen.toggle()
-        
-        
         }
       }
       .sheet(isPresented: $presentingProfileScreen) {

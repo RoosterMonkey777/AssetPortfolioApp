@@ -86,34 +86,37 @@ class AuthenticationViewModel: ObservableObject {
 // Email and Password Authentication
 
 extension AuthenticationViewModel {
-  func signInWithEmailPassword() async -> Bool {
-    authenticationState = .authenticating
-    do {
-      try await Auth.auth().signIn(withEmail: self.email, password: self.password)
-      return true
+  
+    func signInWithEmailPassword() async -> Bool {
+        authenticationState = .authenticating
+        do {
+            try await Auth.auth().signIn(withEmail: self.email, password: self.password)
+            return true
+        }
+        catch  {
+            print(error)
+            errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
+            return false
+        }
     }
-    catch  {
-      print(error)
-      errorMessage = error.localizedDescription
-      authenticationState = .unauthenticated
-      return false
-    }
-  }
 
-  func signUpWithEmailPassword() async -> Bool {
-    authenticationState = .authenticating
-    do  {
-        
-      try await Auth.auth().createUser(withEmail: email, password: password)
-      return true
+    func signUpWithEmailPassword() async -> Bool {
+        authenticationState = .authenticating
+        do  {
+            
+            try await Auth.auth().createUser(withEmail: email, password: password)
+            
+            //create a document in the user collection
+            return true
+        }
+        catch {
+            print(error)
+            errorMessage = error.localizedDescription
+            authenticationState = .unauthenticated
+            return false
+        }
     }
-    catch {
-      print(error)
-      errorMessage = error.localizedDescription
-      authenticationState = .unauthenticated
-      return false
-    }
-  }
     
 
   func signOut() {
