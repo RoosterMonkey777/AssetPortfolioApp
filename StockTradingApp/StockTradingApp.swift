@@ -20,37 +20,44 @@ struct StockTradingApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    // let assetHelper = AssetHelper()
-
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 AuthenticatedView {
                     VStack{
+                        
+                        // App title
                         Text("MY ASSET PORTFOLIO")
                             .font(.title)
                             .fontWeight(.heavy)
+                            .foregroundColor(Color.theme.primary)
                             .padding(.vertical)
-                            .shadow(radius: 50.0)
+                        
+                        // Main App Logo
                         Image(systemName: "chart.line.uptrend.xyaxis")
                             .resizable()
                             .frame(width: 150, height: 150)
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(Color(.systemGreen))
+                            .foregroundColor(Color.theme.bull)
                             .clipShape(Circle())
                             .clipped()
                             .overlay(
-                                Circle().stroke(Color.green, lineWidth: 5)
-                                    .shadow(radius: 50))
+                                Circle().stroke(Color.theme.bull, lineWidth: 5)
+                                    .shadow(
+                                        color: Color.theme.bull.opacity(0.5),
+                                        radius: 15, x:0, y:0)
+                            )
+                        
+                        // App main phrase
+                        Text("Track your favorite stocks, crypto and more!")
+                            .foregroundColor(Color.theme.primary)
+                            .fontWeight(.light)
+                            .padding()
                     }
                     .padding()
-                    Text("Track your favorite stocks, crypto and more!")
-                        .fontWeight(.regular)
-                        .shadow(radius: 50)
-                        .padding()
+   
                 } content: {
                     HomePageView()
-                    Spacer()
                 }
             }
         }

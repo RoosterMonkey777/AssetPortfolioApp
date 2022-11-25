@@ -22,6 +22,7 @@
 		58C88D05292E827400930178 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D04292E827400930178 /* Asset.swift */; };
 		58C88D40292EE25E00930178 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D3F292EE25E00930178 /* AssetHelper.swift */; };
 		58C88D7729312C7600930178 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7629312C7600930178 /* ColorExtension.swift */; };
+		58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7E29313EC300930178 /* CircleButtonView.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		58C88D04292E827400930178 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		58C88D3F292EE25E00930178 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
 		58C88D7629312C7600930178 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		58C88D7E29313EC300930178 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +117,45 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		58C88D7C29313E7400930178 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				58C88D7D29313EB100930178 /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		58C88D7D29313EB100930178 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				58C88D7E29313EC300930178 /* CircleButtonView.swift */,
+			);
+			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		58C88D802931402E00930178 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				58C88D822931404800930178 /* ViewModels */,
+				58C88D812931404200930178 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		58C88D812931404200930178 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58C88D822931404800930178 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		58ED8EA028EE0932007555B6 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +176,8 @@
 		58ED8EAB28EE0932007555B6 /* StockTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				58C88D7C29313E7400930178 /* Components */,
+				58C88D802931402E00930178 /* Home */,
 				58C88D7829312E4700930178 /* Authentication */,
 				58C88D7529312C6000930178 /* Extensions */,
 				58C88D3E292EE20400930178 /* Helpers */,
@@ -238,6 +281,7 @@
 				58C88D40292EE25E00930178 /* AssetHelper.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
 				58C88D7729312C7600930178 /* ColorExtension.swift in Sources */,
+				58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */,
 				58C88D05292E827400930178 /* Asset.swift in Sources */,
 				588598F1292AAFFC006FC002 /* LoginView.swift in Sources */,
 				588598ED292AADE8006FC002 /* AuthenticationViewModel.swift in Sources */,

@@ -48,6 +48,7 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
           presentingLoginScreen.toggle()
         }
         .fontWeight(.bold)
+        .foregroundColor(Color.theme.alien)
           
       }
       .sheet(isPresented: $presentingLoginScreen) {
