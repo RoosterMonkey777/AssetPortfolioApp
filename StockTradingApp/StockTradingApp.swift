@@ -1,6 +1,4 @@
-/*
-    App main
- */
+/* App main */
 
 import SwiftUI
 import Firebase
@@ -22,7 +20,7 @@ struct StockTradingApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    let assetHelper = AssetHelper()
+    // let assetHelper = AssetHelper()
 
     var body: some Scene {
         WindowGroup {
@@ -55,7 +53,6 @@ struct StockTradingApp: App {
                     Spacer()
                 }
             }
-            //StockInfoView().environmentObject(assetHelper)
         }
     }
 }

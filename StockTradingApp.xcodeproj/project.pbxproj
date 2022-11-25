@@ -19,7 +19,6 @@
 		588598F1292AAFFC006FC002 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F0292AAFFC006FC002 /* LoginView.swift */; };
 		588598F3292AB03B006FC002 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F2292AB03B006FC002 /* SignupView.swift */; };
 		588598F5292AB111006FC002 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588598F4292AB111006FC002 /* UserProfileView.swift */; };
-		58C88D03292DAB2100930178 /* StockInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D02292DAB2100930178 /* StockInfoView.swift */; };
 		58C88D05292E827400930178 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D04292E827400930178 /* Asset.swift */; };
 		58C88D40292EE25E00930178 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D3F292EE25E00930178 /* AssetHelper.swift */; };
 		58C88D7729312C7600930178 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7629312C7600930178 /* ColorExtension.swift */; };
@@ -37,7 +36,6 @@
 		588598F0292AAFFC006FC002 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		588598F2292AB03B006FC002 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		588598F4292AB111006FC002 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		58C88D02292DAB2100930178 /* StockInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfoView.swift; sourceTree = "<group>"; };
 		58C88D04292E827400930178 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		58C88D3F292EE25E00930178 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
 		58C88D7629312C7600930178 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -63,34 +61,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		588598F6292ACF88006FC002 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				588598E8292AABB0006FC002 /* AuthenticatedView.swift */,
-				588598EA292AAC47006FC002 /* HomePageView.swift */,
-				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
-				588598F0292AAFFC006FC002 /* LoginView.swift */,
-				588598F2292AB03B006FC002 /* SignupView.swift */,
-				588598F4292AB111006FC002 /* UserProfileView.swift */,
-				58C88D02292DAB2100930178 /* StockInfoView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		588598F7292ACF8E006FC002 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				58C88D04292E827400930178 /* Asset.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		588598F8292ACF99006FC002 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		58C88D3E292EE20400930178 /* Helpers */ = {
@@ -107,6 +83,36 @@
 				58C88D7629312C7600930178 /* ColorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		58C88D7829312E4700930178 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				58C88D7A29312E5A00930178 /* ViewModels */,
+				58C88D7929312E5300930178 /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		58C88D7929312E5300930178 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				588598E8292AABB0006FC002 /* AuthenticatedView.swift */,
+				588598EA292AAC47006FC002 /* HomePageView.swift */,
+				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
+				588598F0292AAFFC006FC002 /* LoginView.swift */,
+				588598F2292AB03B006FC002 /* SignupView.swift */,
+				588598F4292AB111006FC002 /* UserProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58C88D7A29312E5A00930178 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				588598EC292AADE8006FC002 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		58ED8EA028EE0932007555B6 = {
@@ -129,11 +135,10 @@
 		58ED8EAB28EE0932007555B6 /* StockTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				58C88D7829312E4700930178 /* Authentication */,
 				58C88D7529312C6000930178 /* Extensions */,
 				58C88D3E292EE20400930178 /* Helpers */,
-				588598F8292ACF99006FC002 /* ViewModels */,
 				588598F7292ACF8E006FC002 /* Models */,
-				588598F6292ACF88006FC002 /* Views */,
 				58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */,
 				58ED8EB028EE0932007555B6 /* Assets.xcassets */,
 				588598DD2929D41E006FC002 /* GoogleService-Info.plist */,
@@ -232,7 +237,6 @@
 			files = (
 				58C88D40292EE25E00930178 /* AssetHelper.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
-				58C88D03292DAB2100930178 /* StockInfoView.swift in Sources */,
 				58C88D7729312C7600930178 /* ColorExtension.swift in Sources */,
 				58C88D05292E827400930178 /* Asset.swift in Sources */,
 				588598F1292AAFFC006FC002 /* LoginView.swift in Sources */,
