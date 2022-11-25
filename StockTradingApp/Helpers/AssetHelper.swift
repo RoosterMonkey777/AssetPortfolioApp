@@ -5,7 +5,7 @@ class AssetHelper : ObservableObject {
     
     @Published var asset : Asset?
     
-    var apiUrl : String = "https://api.twelvedata.com/time_series?apikey=fb195ed54dbf484993db9ecc94f816e5&interval=5min&country=US&format=JSON&previous_close=true&symbol=AAPL&outputsize=100"
+    var apiUrl : String = "https://api.twelvedata.com/time_series?apikey=fb195ed54dbf484993db9ecc94f816e5&interval=1min&country=US&format=JSON&previous_close=true&symbol=TSLA&outputsize=200"
     
     init(){
         self.fetchDataFromApi()
