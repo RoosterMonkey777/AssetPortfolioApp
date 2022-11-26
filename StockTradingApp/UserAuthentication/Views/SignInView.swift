@@ -8,9 +8,15 @@
 import SwiftUI
 import Firebase
 
+private enum FocusableField: Hashable {
+  case email
+  case password
+}
+
 struct SignInView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
+
     
     @State var email = ""
     @State var password = ""
@@ -19,20 +25,33 @@ struct SignInView: View {
     @State var signInErrorMessage = ""
     
     var body: some View {
-        VStack(spacing: 15) {
-            LogoView()
+        
+        VStack {
+            
             Spacer()
+            LogoView()
+            
+            // page header
+            Text("Login")
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .foregroundColor(Color.theme.primary)
+            
             SignInCredentialFields(email: $email, password: $password)
             Button(action: {
                 signInUser(userEmail: email, userPassword: password)
             }) {
-                Text("Log In")
+                Text("Sign In")
+                    .frame(maxWidth: .infinity, minHeight: 50)
                     .bold()
-                    .frame(width: 360, height: 50)
-                    .background(.thinMaterial)
-                    .cornerRadius(10)
+                    .background(Color.theme.buttoncolor1)
+                    .cornerRadius(15)
             }
-                .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+            .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+            
+            
 
             if !signInErrorMessage.isEmpty {
                 Text("Failed creating account: \(signInErrorMessage)")
@@ -45,11 +64,16 @@ struct SignInView: View {
                     viewRouter.currentPage = .signUpPage
                 }) {
                     Text("Sign Up")
+                        .foregroundColor(Color.theme.buttoncolor1)
+                        .font(.headline)
+                        .fontWeight(.bold)
                 }
             }
-                .opacity(0.9)
+            .opacity(0.9)
+            .padding(.bottom).padding(.bottom)
         }
-            .padding()
+        .padding()
+        
     }
     
     func signInUser(userEmail: String, userPassword: String) {
@@ -86,23 +110,49 @@ struct SignInView_Previews: PreviewProvider {
     }
 }
 
+
 struct SignInCredentialFields: View {
-    
+    @FocusState private var focus: FocusableField?
+
     @Binding var email: String
     @Binding var password: String
     
     var body: some View {
-        Group {
-            TextField("Email", text: $email)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-                .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-                .padding(.bottom, 30)
+//        Group {
+//            TextField("Email", text: $email)
+//                .padding()
+//                .background(.thinMaterial)
+//                .cornerRadius(10)
+//                .textInputAutocapitalization(.never)
+//            SecureField("Password", text: $password)
+//                .padding()
+//                .background(.thinMaterial)
+//                .cornerRadius(10)
+//                .padding(.bottom, 30)
+//        }
+        
+        HStack {
+          Image(systemName: "at")
+          TextField("Email", text: $email)
+            .textInputAutocapitalization(.never)
+            .disableAutocorrection(true)
+            .focused($focus, equals: .email)
+            .submitLabel(.next)
+            .onSubmit {
+              self.focus = .password
+            }
         }
+        .padding(.vertical, 6)
+        .background(Divider(), alignment: .bottom)
+        .padding(.bottom, 4)
+
+        HStack {
+          Image(systemName: "lock")
+          SecureField("Password", text: $password)
+            .focused($focus, equals: .password)
+        }
+        .padding(.vertical, 6)
+        .background(Divider(), alignment: .bottom)
+        .padding(.bottom, 8)
     }
 }

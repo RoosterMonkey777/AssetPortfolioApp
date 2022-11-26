@@ -85,13 +85,43 @@ struct SignUpView_Previews: PreviewProvider {
     }
 }
 
+struct AppTitle: View {
+    var body: some View {
+        Text("MY ASSET TRACKER")
+            .foregroundColor(Color.theme.primary)
+            .font(.title)
+            .fontWeight(.heavy)
+    }
+}
+
 struct LogoView: View {
     var body: some View {
-        Image("Logo")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 300, height: 150)
-            .padding(.top, 70)
+        
+        VStack(spacing: 40){
+            VStack(spacing: 5){
+                Text("MY ASSET TRACKER")
+                    .foregroundColor(Color.theme.primary)
+                    .font(.title)
+                    .fontWeight(.heavy)
+                
+                Text("Track your favorite stocks, crypto and more!")
+                    .foregroundColor(Color.theme.secondary)
+                    .fontWeight(.light)
+                    .font(.subheadline)
+                    .padding()
+            }
+            
+            Image(systemName: "chart.line.uptrend.xyaxis")
+                .resizable()
+                .frame(width: 150, height: 150)
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(Color.theme.bull)
+                .clipShape(Circle())
+                .clipped()
+                .overlay(
+                    Circle().stroke(Color.theme.bull, lineWidth: 5)
+                )
+        }
     }
 }
 

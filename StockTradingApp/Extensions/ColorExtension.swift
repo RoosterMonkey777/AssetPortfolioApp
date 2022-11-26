@@ -14,4 +14,5 @@ struct ColorTheme {
     let bear = Color("Red") // want special red for when price % < 0
     let bull = Color("Green") // want special red for when price % > 0
     let alien = Color("Alien")
+    let buttoncolor1 = Color("ButtonColor1")
 }
