@@ -8,12 +8,14 @@ struct HomePageView: View {
     @State private var welcomeTextSwitch = true
     @State private var rippleAnimation = false
     @State private var showUserProfile = false
+    @State private var presentingProfileScreen = false
+
     
     
     @EnvironmentObject var viewModel: AuthenticationViewModel
     
     var body: some View {
-        NavigationStack{
+        
             
             ZStack {
                 
@@ -33,7 +35,7 @@ struct HomePageView: View {
                 
             }
            
-        }
+        
     }
 }
 
@@ -45,12 +47,14 @@ extension HomePageView {
             // button on left side
             CircleButtonView(iconToUse: showPortfolio ? "person.fill" : "plus")
                 .animation(.none, value: showPortfolio)
-                .onTapGesture {
-                    showPortfolio ? showUserProfile.toggle() : nil
-                }
                 .background(
                     RippleAnimation(animate: $rippleAnimation)
                 )
+            
+            Button("Tap here to view your profile") {
+              presentingProfileScreen.toggle()
+          }
+            
 
             Spacer()
             
@@ -71,16 +75,16 @@ extension HomePageView {
                     withAnimation(.spring()){ // gives it that smooth transition
                         showPortfolio.toggle()
                         rippleAnimation.toggle()
-                        
-                        
                     }
                 }
         }
-        .padding(.horizontal)
-        .sheet(isPresented: $showUserProfile) {
-                UserProfileView()
-                    .environmentObject(viewModel)
+        .sheet(isPresented: $presentingProfileScreen) {
+          NavigationView {
+            UserProfileView()
+              .environmentObject(viewModel)
+          }
         }
+       
     }
     
     

@@ -24,6 +24,11 @@
 		58C88D7729312C7600930178 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7629312C7600930178 /* ColorExtension.swift */; };
 		58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7E29313EC300930178 /* CircleButtonView.swift */; };
 		58C88D872931BD9900930178 /* RippleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D862931BD9900930178 /* RippleAnimation.swift */; };
+		58C88DBA2932BC9D00930178 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DB92932BC9D00930178 /* MainView.swift */; };
+		58C88DBC2932BCAB00930178 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DBB2932BCAB00930178 /* SignUpView.swift */; };
+		58C88DBE2932BCC600930178 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DBD2932BCC600930178 /* SignInView.swift */; };
+		58C88DC12932BD0C00930178 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC02932BD0C00930178 /* ViewRouter.swift */; };
+		58C88DC32932BDBF00930178 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC22932BDBF00930178 /* HomeView.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -43,6 +48,11 @@
 		58C88D7629312C7600930178 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		58C88D7E29313EC300930178 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		58C88D862931BD9900930178 /* RippleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleAnimation.swift; sourceTree = "<group>"; };
+		58C88DB92932BC9D00930178 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		58C88DBB2932BCAB00930178 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		58C88DBD2932BCC600930178 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		58C88DC02932BD0C00930178 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		58C88DC22932BDBF00930178 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +115,6 @@
 				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
 				588598F0292AAFFC006FC002 /* LoginView.swift */,
 				588598F2292AB03B006FC002 /* SignupView.swift */,
-				588598F4292AB111006FC002 /* UserProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				588598EA292AAC47006FC002 /* HomePageView.swift */,
+				588598F4292AB111006FC002 /* UserProfileView.swift */,
+				58C88DC22932BDBF00930178 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +167,33 @@
 				58C88D862931BD9900930178 /* RippleAnimation.swift */,
 			);
 			path = CustomAnimations;
+			sourceTree = "<group>";
+		};
+		58C88DB72932BC6100930178 /* UserAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				58C88DBF2932BCE700930178 /* ViewModels */,
+				58C88DB82932BC8F00930178 /* Views */,
+			);
+			path = UserAuthentication;
+			sourceTree = "<group>";
+		};
+		58C88DB82932BC8F00930178 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58C88DB92932BC9D00930178 /* MainView.swift */,
+				58C88DBB2932BCAB00930178 /* SignUpView.swift */,
+				58C88DBD2932BCC600930178 /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		58C88DBF2932BCE700930178 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				58C88DC02932BD0C00930178 /* ViewRouter.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		58ED8EA028EE0932007555B6 = {
@@ -178,6 +216,7 @@
 		58ED8EAB28EE0932007555B6 /* StockTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				58C88DB72932BC6100930178 /* UserAuthentication */,
 				58C88D852931BD7A00930178 /* CustomAnimations */,
 				58C88D7C29313E7400930178 /* Components */,
 				58C88D802931402E00930178 /* Home */,
@@ -282,17 +321,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C88D40292EE25E00930178 /* AssetHelper.swift in Sources */,
+				58C88DBC2932BCAB00930178 /* SignUpView.swift in Sources */,
+				58C88DBA2932BC9D00930178 /* MainView.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
 				58C88D7729312C7600930178 /* ColorExtension.swift in Sources */,
 				58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */,
 				58C88D05292E827400930178 /* Asset.swift in Sources */,
 				588598F1292AAFFC006FC002 /* LoginView.swift in Sources */,
 				588598ED292AADE8006FC002 /* AuthenticationViewModel.swift in Sources */,
+				58C88DC32932BDBF00930178 /* HomeView.swift in Sources */,
 				588598EF292AAF5B006FC002 /* AuthenticationView.swift in Sources */,
 				588598F3292AB03B006FC002 /* SignupView.swift in Sources */,
 				588598E9292AABB0006FC002 /* AuthenticatedView.swift in Sources */,
 				588598EB292AAC47006FC002 /* HomePageView.swift in Sources */,
+				58C88DC12932BD0C00930178 /* ViewRouter.swift in Sources */,
 				58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */,
+				58C88DBE2932BCC600930178 /* SignInView.swift in Sources */,
 				58C88D872931BD9900930178 /* RippleAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
