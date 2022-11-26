@@ -23,16 +23,17 @@ struct StockTradingApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
+                
                 AuthenticatedView {
                     VStack{
-                        
+
                         // App title
                         Text("MY ASSET PORTFOLIO")
                             .font(.title)
                             .fontWeight(.heavy)
                             .foregroundColor(Color.theme.primary)
                             .padding(.vertical)
-                        
+
                         // Main App Logo
                         Image(systemName: "chart.line.uptrend.xyaxis")
                             .resizable()
@@ -47,19 +48,22 @@ struct StockTradingApp: App {
                                         color: Color.theme.bull.opacity(0.5),
                                         radius: 15, x:0, y:0)
                             )
-                        
+
                         // App main phrase
                         Text("Track your favorite stocks, crypto and more!")
                             .foregroundColor(Color.theme.primary)
                             .fontWeight(.light)
+                            .font(.subheadline)
                             .padding()
                     }
                     .padding()
-   
+
                 } content: {
                     HomePageView()
                 }
+                .toolbar(.hidden)
             }
+            
         }
     }
 }
