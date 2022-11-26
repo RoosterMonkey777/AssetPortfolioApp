@@ -23,6 +23,7 @@
 		58C88D40292EE25E00930178 /* AssetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D3F292EE25E00930178 /* AssetHelper.swift */; };
 		58C88D7729312C7600930178 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7629312C7600930178 /* ColorExtension.swift */; };
 		58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D7E29313EC300930178 /* CircleButtonView.swift */; };
+		58C88D872931BD9900930178 /* RippleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88D862931BD9900930178 /* RippleAnimation.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		58C88D3F292EE25E00930178 /* AssetHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetHelper.swift; sourceTree = "<group>"; };
 		58C88D7629312C7600930178 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		58C88D7E29313EC300930178 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		58C88D862931BD9900930178 /* RippleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleAnimation.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				588598E8292AABB0006FC002 /* AuthenticatedView.swift */,
-				588598EA292AAC47006FC002 /* HomePageView.swift */,
 				588598EE292AAF5B006FC002 /* AuthenticationView.swift */,
 				588598F0292AAFFC006FC002 /* LoginView.swift */,
 				588598F2292AB03B006FC002 /* SignupView.swift */,
@@ -120,17 +121,9 @@
 		58C88D7C29313E7400930178 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				58C88D7D29313EB100930178 /* CircleButton */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		58C88D7D29313EB100930178 /* CircleButton */ = {
-			isa = PBXGroup;
-			children = (
 				58C88D7E29313EC300930178 /* CircleButtonView.swift */,
 			);
-			path = CircleButton;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		58C88D802931402E00930178 /* Home */ = {
@@ -145,6 +138,7 @@
 		58C88D812931404200930178 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				588598EA292AAC47006FC002 /* HomePageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +148,14 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		58C88D852931BD7A00930178 /* CustomAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				58C88D862931BD9900930178 /* RippleAnimation.swift */,
+			);
+			path = CustomAnimations;
 			sourceTree = "<group>";
 		};
 		58ED8EA028EE0932007555B6 = {
@@ -176,6 +178,7 @@
 		58ED8EAB28EE0932007555B6 /* StockTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				58C88D852931BD7A00930178 /* CustomAnimations */,
 				58C88D7C29313E7400930178 /* Components */,
 				58C88D802931402E00930178 /* Home */,
 				58C88D7829312E4700930178 /* Authentication */,
@@ -290,6 +293,7 @@
 				588598E9292AABB0006FC002 /* AuthenticatedView.swift in Sources */,
 				588598EB292AAC47006FC002 /* HomePageView.swift in Sources */,
 				58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */,
+				58C88D872931BD9900930178 /* RippleAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

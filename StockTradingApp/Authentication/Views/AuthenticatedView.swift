@@ -64,17 +64,17 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
               .environmentObject(viewModel)// this is homespageview
 
           // TODO: need to fix this and show all this information only in header
-          Text("You're logged in as \(viewModel.displayName).")
-          Button("Tap here to view your profile") {
-            presentingProfileScreen.toggle()
-        }
+          //Text("You're logged in as \(viewModel.displayName).")
+          //Button("Tap here to view your profile") {
+          //  presentingProfileScreen.toggle()
+      //  }
       }
-      .sheet(isPresented: $presentingProfileScreen) {
-        NavigationView {
-          UserProfileView()
-            .environmentObject(viewModel)
-        }
-      }
+//      .sheet(isPresented: $presentingProfileScreen) {
+//        NavigationView {
+//          UserProfileView()
+//            .environmentObject(viewModel)
+//        }
+//      }
     }
   }
 }

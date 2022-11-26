@@ -4,25 +4,35 @@ import SwiftUI
 
 struct HomePageView: View {
     
-    @State private var showPortfolio = true
+    @State private var showPortfolio = true 
     @State private var welcomeTextSwitch = true
-    @State var animate : Bool = false
+    @State private var rippleAnimation = false
+    @State private var showUserProfile = false
+    
     
     @EnvironmentObject var viewModel: AuthenticationViewModel
     
     var body: some View {
-        ZStack {
+        NavigationStack{
             
-            // background stuff
-            Color.theme.background
-                .ignoresSafeArea()
-            
-            // content stuff
-            VStack{
-                homeHeader
-                Spacer(minLength: 0)
-                //TODO: Add more content
+            ZStack {
+                
+                // background stuff
+                Color.theme.background
+                    .ignoresSafeArea()
+                
+                // content stuff
+                VStack{
+                    homeHeader
+                    
+                   
+                    Spacer(minLength: 0)
+                    //TODO: Add more content
+                }
+                
+                
             }
+           
         }
     }
 }
@@ -35,9 +45,13 @@ extension HomePageView {
             // button on left side
             CircleButtonView(iconToUse: showPortfolio ? "person.fill" : "plus")
                 .animation(.none, value: showPortfolio)
-//                .background(
-//                    CircleButtonAnimationView(animate: $showPortfolio)
-//                )
+                .onTapGesture {
+                    showPortfolio ? showUserProfile.toggle() : nil
+                }
+                .background(
+                    RippleAnimation(animate: $rippleAnimation)
+                )
+
             Spacer()
             
             // middle text
@@ -51,16 +65,24 @@ extension HomePageView {
             
             // button on right side
             CircleButtonView(iconToUse: "arrow.right")
-                .rotationEffect(Angle(degrees: showPortfolio ? 0 : 180))
+                .rotationEffect(Angle(degrees: showPortfolio ? 0 : -180))
                 .onTapGesture {
                     //showPortfolio.toggle()
                     withAnimation(.spring()){ // gives it that smooth transition
                         showPortfolio.toggle()
+                        rippleAnimation.toggle()
+                        
+                        
                     }
                 }
         }
         .padding(.horizontal)
+        .sheet(isPresented: $showUserProfile) {
+                UserProfileView()
+                    .environmentObject(viewModel)
+        }
     }
+    
     
     private var welcomeText : some View {
 
@@ -69,7 +91,6 @@ extension HomePageView {
                 Text("LIVE PRICES")
             }
             else {
-                
                 if !welcomeTextSwitch {
                     Text("PORTFOLIO")
                 } else {
