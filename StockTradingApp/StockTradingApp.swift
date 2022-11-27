@@ -72,8 +72,7 @@ import FirebaseAuth
 struct StockTradingApp: App {
 
     @StateObject var viewRouter = ViewRouter()
-    
-        
+   
     init() {
             FirebaseApp.configure()
     }

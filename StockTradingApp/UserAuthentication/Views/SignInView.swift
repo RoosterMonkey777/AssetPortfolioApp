@@ -1,9 +1,4 @@
-//
-//  SignInView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-26.
-//
+////  View for letting users sign into their acccount through firebase authentication
 
 import SwiftUI
 import Firebase
@@ -17,7 +12,6 @@ struct SignInView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
 
-    
     @State var email = ""
     @State var password = ""
     
@@ -27,11 +21,9 @@ struct SignInView: View {
     var body: some View {
         
         VStack {
-            
             Spacer()
-            LogoView()
+            LogoView() // consits of app title, and app logo
             
-            // page header
             Text("Login")
                 .font(.title)
                 .fontWeight(.bold)
@@ -43,20 +35,19 @@ struct SignInView: View {
             Button(action: {
                 signInUser(userEmail: email, userPassword: password)
             }) {
-                Text("Sign In")
+                Text("Login ")
                     .frame(maxWidth: .infinity, minHeight: 50)
                     .bold()
                     .background(Color.theme.buttoncolor1)
                     .cornerRadius(15)
             }
-            .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
-            
-            
+            .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true) // if fields empty dont show
 
             if !signInErrorMessage.isEmpty {
                 Text("Failed creating account: \(signInErrorMessage)")
                     .foregroundColor(.red)
             }
+            
             Spacer()
             HStack {
                 Text("Don't have an account?")
@@ -73,10 +64,10 @@ struct SignInView: View {
             .padding(.bottom).padding(.bottom)
         }
         .padding()
-        
     }
     
-    func signInUser(userEmail: String, userPassword: String) {
+    // Sign in user into their firebase authenticated account if it exists
+    private func signInUser(userEmail: String, userPassword: String) {
         
         signInProcessing = true
         
@@ -89,28 +80,20 @@ struct SignInView: View {
             }
             switch authResult {
             case .none:
-                print("Could not sign in user.")
+                print("Error: the User could not be signed in.")
                 signInProcessing = false
             case .some(_):
-                print("User signed in")
+                print("Success: the User signed in")
                 signInProcessing = false
                 withAnimation {
                     viewRouter.currentPage = .homePage
                 }
             }
-            
         }
-
     }
 }
 
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView()
-    }
-}
-
-
+// view that takes in the users inputs and creates the account
 struct SignInCredentialFields: View {
     @FocusState private var focus: FocusableField?
 
@@ -118,19 +101,6 @@ struct SignInCredentialFields: View {
     @Binding var password: String
     
     var body: some View {
-//        Group {
-//            TextField("Email", text: $email)
-//                .padding()
-//                .background(.thinMaterial)
-//                .cornerRadius(10)
-//                .textInputAutocapitalization(.never)
-//            SecureField("Password", text: $password)
-//                .padding()
-//                .background(.thinMaterial)
-//                .cornerRadius(10)
-//                .padding(.bottom, 30)
-//        }
-        
         HStack {
           Image(systemName: "at")
           TextField("Email", text: $email)
@@ -156,3 +126,10 @@ struct SignInCredentialFields: View {
         .padding(.bottom, 8)
     }
 }
+
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInView()
+    }
+}
+

@@ -8,6 +8,13 @@
 import SwiftUI
 import Firebase
 
+
+private enum FocusableField: Hashable {
+  case email
+  case password
+  case passwordConfirmation
+}
+
 struct SignUpView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
@@ -20,20 +27,28 @@ struct SignUpView: View {
     @State var signUpErrorMessage = ""
     
     var body: some View {
-        VStack(spacing: 15) {
-            LogoView()
+        VStack{
             Spacer()
+            LogoView()
+            Text("Sign Up")
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .foregroundColor(Color.theme.primary)
+           
             SignUpCredentialFields(email: $email, password: $password, passwordConfirmation: $passwordConfirmation)
+            
             Button(action: {
                 signUpUser(userEmail: email, userPassword: password)
             }) {
                 Text("Sign Up")
+                    .frame(maxWidth: .infinity, minHeight: 50)
                     .bold()
-                    .frame(width: 360, height: 50)
-                    .background(.thinMaterial)
-                    .cornerRadius(10)
+                    .background(Color.theme.buttoncolor1)
+                    .cornerRadius(15)
             }
-                .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
+            .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
             
             if !signUpErrorMessage.isEmpty {
                 Text("Failed creating account: \(signUpErrorMessage)")
@@ -45,13 +60,20 @@ struct SignUpView: View {
                 Button(action: {
                     viewRouter.currentPage = .signInPage
                 }) {
-                    Text("Log In")
+                    Text("Login")
+                        .foregroundColor(Color.theme.buttoncolor1)
+                        .font(.headline)
+                        .fontWeight(.bold)
                 }
             }
-                .opacity(0.9)
+            .opacity(0.9)
+            .padding(.bottom).padding(.bottom)
+
         }
-            .padding()
+        .padding()
     }
+    
+    
     
     func signUpUser(userEmail: String, userPassword: String) {
         
@@ -82,15 +104,6 @@ struct SignUpView: View {
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpView()
-    }
-}
-
-struct AppTitle: View {
-    var body: some View {
-        Text("MY ASSET TRACKER")
-            .foregroundColor(Color.theme.primary)
-            .font(.title)
-            .fontWeight(.heavy)
     }
 }
 
@@ -126,29 +139,67 @@ struct LogoView: View {
 }
 
 struct SignUpCredentialFields: View {
-    
+    @FocusState private var focus: FocusableField?
     @Binding var email: String
     @Binding var password: String
     @Binding var passwordConfirmation: String
     
     var body: some View {
-        Group {
-            TextField("Email", text: $email)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-                .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-            SecureField("Confirm Password", text: $passwordConfirmation)
-                .padding()
-                .background(.thinMaterial)
-                .cornerRadius(10)
-                .border(Color.red, width: passwordConfirmation != password ? 1 : 0)
-                .padding(.bottom, 30)
+                
+        HStack {
+          Image(systemName: "at")
+          TextField("Email", text: $email)
+            .textInputAutocapitalization(.never)
+            .disableAutocorrection(true)
+            .focused($focus, equals: .email)
+            .submitLabel(.next)
+            .onSubmit {
+              self.focus = .password
+            }
         }
+        .padding(.vertical, 6)
+        .background(Divider(), alignment: .bottom)
+        .padding(.bottom, 4)
+
+        HStack {
+          Image(systemName: "lock")
+          SecureField("Password", text: $password)
+            .focused($focus, equals: .password)
+            .submitLabel(.next)
+            .onSubmit {
+                self.focus = .passwordConfirmation
+            }
+        }
+        .padding(.vertical, 6)
+        .background(Divider(), alignment: .bottom)
+        .padding(.bottom, 8)
+
+        HStack {
+          Image(systemName: "lock")
+          SecureField("Confirm password", text: $passwordConfirmation)
+            .focused($focus, equals: .passwordConfirmation)
+        }
+        .padding(.vertical, 6)
+        .background(Divider(), alignment: .bottom)
+        .padding(.bottom, 8)
+        
+        //        Group {
+        //            TextField("Email", text: $email)
+        //                .padding()
+        //                .background(.thinMaterial)
+        //                .cornerRadius(10)
+        //                .textInputAutocapitalization(.never)
+        //            SecureField("Password", text: $password)
+        //                .padding()
+        //                .background(.thinMaterial)
+        //                .cornerRadius(10)
+        //            SecureField("Confirm Password", text: $passwordConfirmation)
+        //                .padding()
+        //                .background(.thinMaterial)
+        //                .cornerRadius(10)
+        //                .border(Color.red, width: passwordConfirmation != password ? 1 : 0)
+        //                .padding(.bottom, 30)
+        //        }
     }
 }
 
