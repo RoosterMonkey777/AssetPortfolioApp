@@ -1,13 +1,7 @@
-//
-//  SignUpView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-26.
-//
+////  View for letting users sign into their acccount through firebase authentication
 
 import SwiftUI
 import Firebase
-
 
 private enum FocusableField: Hashable {
   case email
@@ -73,8 +67,7 @@ struct SignUpView: View {
         .padding()
     }
     
-    
-    
+    // sign up the user account using firebase authenticaiton
     func signUpUser(userEmail: String, userPassword: String) {
         
         signUpProcessing = true
@@ -96,17 +89,10 @@ struct SignUpView: View {
                 viewRouter.currentPage = .homePage
             }
         }
-        
-    }
-    
-}
-
-struct SignUpView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUpView()
     }
 }
 
+// view consisting of the app title and the app logo
 struct LogoView: View {
     var body: some View {
         
@@ -138,6 +124,7 @@ struct LogoView: View {
     }
 }
 
+// view that lets user input their sign up information
 struct SignUpCredentialFields: View {
     @FocusState private var focus: FocusableField?
     @Binding var email: String
@@ -182,24 +169,12 @@ struct SignUpCredentialFields: View {
         .padding(.vertical, 6)
         .background(Divider(), alignment: .bottom)
         .padding(.bottom, 8)
-        
-        //        Group {
-        //            TextField("Email", text: $email)
-        //                .padding()
-        //                .background(.thinMaterial)
-        //                .cornerRadius(10)
-        //                .textInputAutocapitalization(.never)
-        //            SecureField("Password", text: $password)
-        //                .padding()
-        //                .background(.thinMaterial)
-        //                .cornerRadius(10)
-        //            SecureField("Confirm Password", text: $passwordConfirmation)
-        //                .padding()
-        //                .background(.thinMaterial)
-        //                .cornerRadius(10)
-        //                .border(Color.red, width: passwordConfirmation != password ? 1 : 0)
-        //                .padding(.bottom, 30)
-        //        }
+    }
+}
+
+struct SignUpView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignUpView()
     }
 }
 
