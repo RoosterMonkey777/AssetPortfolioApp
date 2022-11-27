@@ -1,9 +1,4 @@
-//
-//  MainView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-26.
-//
+// checks which state the app is in to determine authentcaion state
 
 import SwiftUI
 import Firebase

@@ -1,9 +1,4 @@
-//
-//  ViewRouter.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-26.
-//
+// The various pages that the app can take
 
 import SwiftUI
 

@@ -1,9 +1,4 @@
-//
-//  HomeView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-26.
-//
+// User Home Page View
 
 import SwiftUI
 import Firebase

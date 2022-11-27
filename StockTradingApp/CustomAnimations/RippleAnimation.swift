@@ -1,13 +1,4 @@
-//
-//  RippleAnimation.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-25.
-//
-
-import SwiftUI
-
-
+// Ripple animation for when button is circular button ispressed
 
 import SwiftUI
 
