@@ -7,18 +7,14 @@ struct HomeView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
     
-    @State private var showPortfolio = true
+    @State private var showPortfolio : Bool = true
+    @State private var rippleAnimation : Bool = false
+    @State private var showUserProfile : Bool = false // sheet for user profile settings
+    
     //@State private var welcomeTextSwitch = true
-    //@State private var rippleAnimation = false
-    //@State private var showUserProfile = false
-    //@State private var presentingProfileScreen = false
-    
-    @State var signOutProcessing = false
-    @State var deleteProcessing = false
-    
+
     var body: some View {
         NavigationView {
-            
             ZStack {
                 
                 // background stuff
@@ -28,77 +24,12 @@ struct HomeView: View {
                 // content stuff
                 VStack{
                     homeHeader
-                    Text("HomeView")
-                        .navigationTitle("V24")
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                if signOutProcessing {
-                                    ProgressView()
-                                } else {
-                                    Button("Sign Out") {
-                                        signOutUser()
-                                    }
-                                }
-                            }
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                if signOutProcessing {
-                                    ProgressView()
-                                } else {
-                                    Button("Delete") {
-                                        deleteUser()
-                                    }
-                                }
-                            }
-                        }
-                    
-                   
-                    // Spacer(minLength: 0)
-                    //TODO: Add more content
+                     Spacer(minLength: 0)
                 }
-                
-                
+                .sheet(isPresented: $showUserProfile){UserProfileView()} //show user profile
             }
-            
-            
-            
-            
+            .toolbar(.hidden)
         }
-    }
-    
-    private func signOutUser() {
-        signOutProcessing = true
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
-            signOutProcessing = false
-        }
-        withAnimation {
-            viewRouter.currentPage = .signInPage
-        }
-    }
-    private func deleteUser(){
-        deleteProcessing = true
-        let user = Auth.auth().currentUser
-        
-        user?.delete { error in
-          if let error = error {
-              print("Error deleting account: %@", error)
-          } else {
-            print("Account deleted")
-          }
-            deleteProcessing = false
-        }
-        withAnimation {
-            viewRouter.currentPage = .signInPage
-        }
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }
 
@@ -110,15 +41,13 @@ extension HomeView {
             // button on left side
             CircleButtonView(iconToUse: showPortfolio ? "person.fill" : "plus")
                 .animation(.none, value: showPortfolio)
-//                .background(
-//                    RippleAnimation(animate: $rippleAnimation)
-//                )
-            
-//            Button("Tap here to view your profile") {
-//              presentingProfileScreen.toggle()
-//          }
-            
-
+                .background(
+                    RippleAnimation(animate: $rippleAnimation)
+                )
+                .onTapGesture {
+                    showUserProfile.toggle()
+                }
+    
             Spacer()
             
             // middle text
@@ -137,17 +66,11 @@ extension HomeView {
                     //showPortfolio.toggle()
                     withAnimation(.spring()){ // gives it that smooth transition
                         showPortfolio.toggle()
-//                        rippleAnimation.toggle()
+                        rippleAnimation.toggle()
                     }
                 }
         }
-//        .sheet(isPresented: $presentingProfileScreen) {
-//          NavigationView {
-//            UserProfileView()
-//              .environmentObject(viewModel)
-//          }
-//        }
-       
+        .padding(.horizontal)
     }
     
     
@@ -176,5 +99,11 @@ extension HomeView {
         .font(.headline)
         .fontWeight(.heavy)
         .foregroundColor(Color.theme.alien)
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
     }
 }
