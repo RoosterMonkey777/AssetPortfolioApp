@@ -47,9 +47,7 @@ import Foundation
 
 struct CryptoModel : Identifiable, Codable {
 
-    struct SparklineIn7D : Codable {
-        let price: [Double]?
-    }
+   
     
     let id, symbol, name: String
     let image: String
@@ -106,43 +104,47 @@ struct CryptoModel : Identifiable, Codable {
         case coinHoldings
     }
     
-    init(from decoder: Decoder, amount: Double) throws {
-
-        let container = try decoder.container(keyedBy: CryptoKeys.self)
-
-        self.id = try container.decode(String.self, forKey: .id)
-        self.symbol = try container.decode(String.self, forKey: .symbol)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.image = try container.decode(String.self, forKey: .image)
-        self.currentPrice = try container.decode(Double.self, forKey: .currentPrice)
-
-        self.marketCap = try container.decodeIfPresent(Double.self, forKey: .marketCap)
-        self.marketCapRank = try container.decodeIfPresent(Double.self, forKey: .marketCapRank)
-        self.fullyDilutedValuation = try container.decodeIfPresent(Double.self, forKey: .fullyDilutedValuation)
-        self.totalVolume = try container.decodeIfPresent(Double.self, forKey: .totalVolume)
-        self.high24H = try container.decodeIfPresent(Double.self, forKey: .high24H)
-        self.low24H = try container.decodeIfPresent(Double.self, forKey: .low24H)
-        self.priceChange24H = try container.decodeIfPresent(Double.self, forKey: .priceChange24H)
-        self.priceChangePercentage24H = try container.decodeIfPresent(Double.self, forKey: .priceChangePercentage24H)
-        self.marketCapChange24H = try container.decodeIfPresent(Double.self, forKey: .marketCapChange24H)
-        self.marketCapChangePercentage24H = try container.decodeIfPresent(Double.self, forKey: .marketCapChangePercentage24H)
-        self.circulatingSupply = try container.decodeIfPresent(Double.self, forKey: .circulatingSupply)
-        self.totalSupply = try container.decodeIfPresent(Double.self, forKey: .totalSupply)
-        self.maxSupply = try container.decodeIfPresent(Double.self, forKey: .maxSupply)
-        self.ath = try container.decodeIfPresent(Double.self, forKey: .ath)
-        self.athChangePercentage = try container.decodeIfPresent(Double.self, forKey: .athChangePercentage)
-        self.athDate = try container.decodeIfPresent(String.self, forKey: .athDate)
-        self.atl = try container.decodeIfPresent(Double.self, forKey: .atl)
-        self.atlChangePercentage = try container.decodeIfPresent(Double.self, forKey: .atlChangePercentage)
-        self.atlDate = try container.decodeIfPresent(String.self, forKey: .atlDate)
-        self.lastUpdated = try container.decodeIfPresent(String.self, forKey: .lastUpdated)
-        self.sparklineIn7D = try container.decodeIfPresent(SparklineIn7D.self, forKey: .sparklineIn7D)
-        self.priceChangePercentage24HInCurrency = try container.decodeIfPresent(Double.self, forKey: .priceChangePercentage24HInCurrency)
-        self.coinHoldings = amount
-    }
+//    init(from decoder: Decoder, amount: Double) throws {
+//
+//        let container = try decoder.container(keyedBy: CryptoKeys.self)
+//
+//        self.id = try container.decode(String.self, forKey: .id)
+//        self.symbol = try container.decode(String.self, forKey: .symbol)
+//        self.name = try container.decode(String.self, forKey: .name)
+//        self.image = try container.decode(String.self, forKey: .image)
+//        self.currentPrice = try container.decode(Double.self, forKey: .currentPrice)
+//
+//        self.marketCap = try container.decodeIfPresent(Double.self, forKey: .marketCap)
+//        self.marketCapRank = try container.decodeIfPresent(Double.self, forKey: .marketCapRank)
+//        self.fullyDilutedValuation = try container.decodeIfPresent(Double.self, forKey: .fullyDilutedValuation)
+//        self.totalVolume = try container.decodeIfPresent(Double.self, forKey: .totalVolume)
+//        self.high24H = try container.decodeIfPresent(Double.self, forKey: .high24H)
+//        self.low24H = try container.decodeIfPresent(Double.self, forKey: .low24H)
+//        self.priceChange24H = try container.decodeIfPresent(Double.self, forKey: .priceChange24H)
+//        self.priceChangePercentage24H = try container.decodeIfPresent(Double.self, forKey: .priceChangePercentage24H)
+//        self.marketCapChange24H = try container.decodeIfPresent(Double.self, forKey: .marketCapChange24H)
+//        self.marketCapChangePercentage24H = try container.decodeIfPresent(Double.self, forKey: .marketCapChangePercentage24H)
+//        self.circulatingSupply = try container.decodeIfPresent(Double.self, forKey: .circulatingSupply)
+//        self.totalSupply = try container.decodeIfPresent(Double.self, forKey: .totalSupply)
+//        self.maxSupply = try container.decodeIfPresent(Double.self, forKey: .maxSupply)
+//        self.ath = try container.decodeIfPresent(Double.self, forKey: .ath)
+//        self.athChangePercentage = try container.decodeIfPresent(Double.self, forKey: .athChangePercentage)
+//        self.athDate = try container.decodeIfPresent(String.self, forKey: .athDate)
+//        self.atl = try container.decodeIfPresent(Double.self, forKey: .atl)
+//        self.atlChangePercentage = try container.decodeIfPresent(Double.self, forKey: .atlChangePercentage)
+//        self.atlDate = try container.decodeIfPresent(String.self, forKey: .atlDate)
+//        self.lastUpdated = try container.decodeIfPresent(String.self, forKey: .lastUpdated)
+//        self.sparklineIn7D = try container.decodeIfPresent(SparklineIn7D.self, forKey: .sparklineIn7D)
+//        self.priceChangePercentage24HInCurrency = try container.decodeIfPresent(Double.self, forKey: .priceChangePercentage24HInCurrency)
+//        self.coinHoldings = amount
+//    }
+//
+//    func updateCoinHoldings(amount: Double) -> CryptoModel {
+//        return self
+//    }
     
-    func updateCoinHoldings(amount: Double) -> CryptoModel {
-        return self
+    func updateCoinHolding(amount: Double) -> CryptoModel{
+        return CryptoModel(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCap: marketCap, marketCapRank: marketCapRank, fullyDilutedValuation: fullyDilutedValuation, totalVolume: totalVolume, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, marketCapChange24H: marketCapChange24H, marketCapChangePercentage24H: marketCapChangePercentage24H, circulatingSupply: circulatingSupply, totalSupply: totalSupply, maxSupply: maxSupply, ath: ath, athChangePercentage: athChangePercentage, athDate: athDate, atl: atl, atlChangePercentage: atlChangePercentage, atlDate: atlDate, lastUpdated: lastUpdated, sparklineIn7D: sparklineIn7D, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, coinHoldings: amount)
     }
     
     var getRank : Int {
@@ -152,6 +154,10 @@ struct CryptoModel : Identifiable, Codable {
     var currentCoinHoldingsValue : Double {
         return currentPrice * (coinHoldings ?? 0)
     }
+}
+
+struct SparklineIn7D : Codable {
+    let price: [Double]?
 }
 
 
