@@ -5,7 +5,9 @@ import Firebase
 
 struct HomeView: View {
     
-    @EnvironmentObject private var homeViewModel : HomeViewModel
+    //@EnvironmentObject private var homeViewModel : HomeViewModel
+    @StateObject var homeViewModel = HomeViewModel.shared
+
     @EnvironmentObject private var viewRouter: ViewRouter
     
     @State private var showPortfolio : Bool = true
@@ -28,11 +30,13 @@ struct HomeView: View {
                     Divider().background(Color.theme.alien)
                     
                     List{
-                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
-                            .listRowSeparator(.hidden)
-                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
-                            .listRowSeparator(.hidden)
-
+//                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
+//                            .listRowSeparator(.hidden)
+//                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
+//                            .listRowSeparator(.hidden)
+                        ForEach(homeViewModel.allCryptocurrencies){ crypto in
+                            CryptoRowView(crypto: crypto, showHoldingsColumn: false)
+                        }
                     }
                     
                     .listStyle(.plain)

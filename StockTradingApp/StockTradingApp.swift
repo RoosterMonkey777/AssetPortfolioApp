@@ -71,7 +71,8 @@ import FirebaseAuth
 @main
 struct StockTradingApp: App {
 
-    @StateObject var homeViewModel = HomeViewModel()
+    
+    @StateObject var homeViewModel = HomeViewModel.shared
     @StateObject var viewRouter = ViewRouter()
    
     init() { FirebaseApp.configure() }
