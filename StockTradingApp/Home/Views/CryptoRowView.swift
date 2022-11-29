@@ -22,10 +22,10 @@ struct CryptoRowView: View {
                 // left column
                 VStack(alignment: .center, spacing: 15){
                     HStack (alignment: .top){
-//                        Text("\(crypto.getRank)")
-//                            .font(.headline)
-//                            .foregroundColor(Color.theme.secondary)
-//                            .frame(minWidth: 30)
+                        Text("\(crypto.getRank)")
+                            .font(.headline)
+                            .foregroundColor(Color.theme.secondary)
+                            .frame(minWidth: 30)
                         
                             
                         Text(crypto.symbol.uppercased())
@@ -44,9 +44,9 @@ struct CryptoRowView: View {
                 }
                 
             
-//                Spacer()
-//
-//                // middle column if applicable
+                Spacer()
+
+                // middle column if applicable
 //                if showHoldingsColumn {
 //                    VStack(alignment: .trailing){
 //                        Text(crypto.currentCoinHoldingsValue.formatAssetPriceToTwo())
@@ -60,18 +60,18 @@ struct CryptoRowView: View {
 //
 //                }
                 
-//                // riight column
-//                VStack(alignment: .trailing){
-//                    Text("\(crypto.currentPrice.formatAssetPriceToSix())")
-//                        .bold()
-//                        .foregroundColor(Color.theme.primary)
-//                    Text("\(crypto.priceChangePercentage24H?.formatToPercentString() ?? "") %")
-//                        .foregroundColor(
-//                            (crypto.priceChangePercentage24H ?? 0) <= 0 ?
-//                            Color.theme.bear :
-//                            Color.theme.bull
-//                        )
-//                }.frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing) //1/3 of the screen
+                // riight column
+                VStack(alignment: .trailing){
+                    Text("\(crypto.currentPrice?.formatAssetPriceToSix() ?? "")" )
+                        .bold()
+                        .foregroundColor(Color.theme.primary)
+                    Text("\(crypto.priceChangePercentage24H?.formatToPercentString() ?? "") %")
+                        .foregroundColor(
+                            (crypto.priceChangePercentage24H ?? 0) <= 0 ?
+                            Color.theme.bear :
+                            Color.theme.bull
+                        )
+                }.frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing) //1/3 of the screen
             }
             .font(.subheadline)
             .padding()
@@ -82,10 +82,10 @@ struct CryptoRowView: View {
     }
 }
 
-struct CryptoRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        CryptoRowView(crypto: shared_dev.crypto, showHoldingsColumn: true)
-    }
-}
+//struct CryptoRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CryptoRowView(crypto: shared_dev.crypto, showHoldingsColumn: true)
+//    }
+//}
 
 

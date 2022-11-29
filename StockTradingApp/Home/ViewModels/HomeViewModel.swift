@@ -10,7 +10,8 @@ import UIKit
 
 class HomeViewModel: ObservableObject {
     
-    var apiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h"
+    //var apiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h"
+    var apiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=3&page=1&sparkline=true&price_change_percentage=24h"
     
     static let shared = HomeViewModel()
     
@@ -60,6 +61,7 @@ class HomeViewModel: ObservableObject {
                                             //self.portfolioCryptoCurrencies.append(contentsOf: decodedCrypto)
                                             self.cryptoList = decodedCrypto
                                             self.allCryptocurrencies.append(contentsOf: decodedCrypto)
+                                            self.portfolioCryptoCurrencies.append(contentsOf: decodedCrypto)
                                             
                                             
                                         }

@@ -28,18 +28,49 @@ struct HomeView: View {
                 VStack{
                     homeHeader
                     Divider().background(Color.theme.alien)
-                    
-                    List{
-//                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
-//                            .listRowSeparator(.hidden)
-//                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
-//                            .listRowSeparator(.hidden)
-                        ForEach(homeViewModel.allCryptocurrencies){ crypto in
-                            CryptoRowView(crypto: crypto, showHoldingsColumn: false)
+                    HStack{
+                        Text("Asset")
+                        Spacer()
+                        if showPortfolio{
+                            Text("Shares")
                         }
+                        
+                        Text("Price")
+                            .frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing) //1/3 of the screen
+                    }
+                    .font(.body)
+                    .foregroundColor(Color.theme.secondary)
+                    .padding(.horizontal)
+                    .padding(.horizontal)
+                    .padding(.horizontal)
+                    
+                    Divider().background(Color.theme.alien)
+
+                    
+                    
+                    if showPortfolio {
+                        List{
+                            ForEach(homeViewModel.allCryptocurrencies){ crypto in
+                                CryptoRowView(crypto: crypto, showHoldingsColumn: false)
+                                   .listRowSeparator(.hidden)
+                            }
+                        }
+                        .listStyle(.plain)
+                        .transition(.move(edge:  .leading))
+                    }
+                    if !showPortfolio{
+                        List{
+                            ForEach(homeViewModel.portfolioCryptoCurrencies){ crypto in
+                                CryptoRowView(crypto: crypto, showHoldingsColumn: false)
+                                   .listRowSeparator(.hidden)
+                            }
+                        }
+                        .listStyle(.plain)
+                        .transition(.move(edge:  .trailing))
+
                     }
                     
-                    .listStyle(.plain)
+                    
                      Spacer(minLength: 0)
                 }
                 .sheet(isPresented: $showUserProfile){UserProfileView()} //show user profile
