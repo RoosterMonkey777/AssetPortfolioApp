@@ -13,7 +13,7 @@ struct CryptoRowView: View {
             RoundedRectangle(cornerRadius: 25.0)
                 .fill(Color.theme.background)
                 .frame(maxWidth: .infinity, maxHeight: 200)
-                .shadow(color:Color.theme.alien,radius: 10)
+                .shadow(color:Color.theme.alien,radius: 5)
                 
                 
             
@@ -26,6 +26,8 @@ struct CryptoRowView: View {
                             .font(.headline)
                             .foregroundColor(Color.theme.secondary)
                             .frame(minWidth: 30)
+                        
+                            
                         Text(crypto.symbol.uppercased())
                             .font(.headline)
                             .padding(.leading, 6)
@@ -75,7 +77,8 @@ struct CryptoRowView: View {
             .padding()
             
         }
-        .padding()
+        
+        .padding(.top)
     }
 }
 

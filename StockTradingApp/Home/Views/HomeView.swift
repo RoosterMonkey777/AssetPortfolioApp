@@ -24,6 +24,13 @@ struct HomeView: View {
                 // content stuff
                 VStack{
                     homeHeader
+                    
+                    List{
+                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
+                        CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
+
+                    }
+                    .listStyle(.plain)
                      Spacer(minLength: 0)
                 }
                 .sheet(isPresented: $showUserProfile){UserProfileView()} //show user profile
