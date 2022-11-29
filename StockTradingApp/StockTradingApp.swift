@@ -71,16 +71,19 @@ import FirebaseAuth
 @main
 struct StockTradingApp: App {
 
+    @StateObject var homeViewModel = HomeViewModel()
     @StateObject var viewRouter = ViewRouter()
    
-    init() {
-            FirebaseApp.configure()
-    }
+    init() { FirebaseApp.configure() }
     
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(viewRouter)
+            NavigationView{
+                MainView()
+                    .environmentObject(viewRouter)
+                    .environmentObject(homeViewModel)
+            }
+            .toolbar(.hidden)
         }
     }
 }

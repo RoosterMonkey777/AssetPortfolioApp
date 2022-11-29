@@ -30,6 +30,7 @@
 		58C88DC62932FD2500930178 /* EquityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC52932FD2500930178 /* EquityModel.swift */; };
 		58C88DC9293542FE00930178 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC8293542FE00930178 /* CryptoModel.swift */; };
 		58C88DCB2935653300930178 /* CryptoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCA2935653300930178 /* CryptoRowView.swift */; };
+		58C88DCD2935941400930178 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCC2935941400930178 /* HomeViewModel.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		58C88DC52932FD2500930178 /* EquityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquityModel.swift; sourceTree = "<group>"; };
 		58C88DC8293542FE00930178 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		58C88DCA2935653300930178 /* CryptoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRowView.swift; sourceTree = "<group>"; };
+		58C88DCC2935941400930178 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		58C88D822931404800930178 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				58C88DCC2935941400930178 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				58C88DBC2932BCAB00930178 /* SignUpView.swift in Sources */,
 				58C88DBA2932BC9D00930178 /* MainView.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
+				58C88DCD2935941400930178 /* HomeViewModel.swift in Sources */,
 				58C88D7729312C7600930178 /* ColorExtension.swift in Sources */,
 				58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */,
 				588598F1292AAFFC006FC002 /* LoginView.swift in Sources */,

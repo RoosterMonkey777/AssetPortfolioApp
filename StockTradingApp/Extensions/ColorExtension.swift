@@ -74,6 +74,8 @@ class DeveloperPreview{
     static let shared_preview = DeveloperPreview()
     private init(){}
     
+    let homeVM = HomeViewModel()
+    
     let crypto = CryptoModel(
         id: "bitcoin",
         symbol: "btc",

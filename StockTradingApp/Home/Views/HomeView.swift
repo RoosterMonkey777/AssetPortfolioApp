@@ -5,7 +5,8 @@ import Firebase
 
 struct HomeView: View {
     
-    @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject private var homeViewModel : HomeViewModel
+    @EnvironmentObject private var viewRouter: ViewRouter
     
     @State private var showPortfolio : Bool = true
     @State private var rippleAnimation : Bool = false
@@ -14,7 +15,7 @@ struct HomeView: View {
     //@State private var welcomeTextSwitch = true
 
     var body: some View {
-        NavigationView {
+        
             ZStack {
                 
                 // background stuff
@@ -24,18 +25,21 @@ struct HomeView: View {
                 // content stuff
                 VStack{
                     homeHeader
+                    Divider().background(Color.theme.alien)
                     
                     List{
                         CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
+                            .listRowSeparator(.hidden)
                         CryptoRowView(crypto: DeveloperPreview.shared_preview.crypto, showHoldingsColumn: true)
+                            .listRowSeparator(.hidden)
 
                     }
+                    
                     .listStyle(.plain)
                      Spacer(minLength: 0)
                 }
                 .sheet(isPresented: $showUserProfile){UserProfileView()} //show user profile
-            }
-            .toolbar(.hidden)
+           
         }
     }
 }
@@ -111,6 +115,7 @@ extension HomeView {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
+        
         HomeView()
     }
 }
