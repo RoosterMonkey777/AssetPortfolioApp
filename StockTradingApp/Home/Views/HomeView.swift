@@ -51,7 +51,7 @@ struct HomeView: View {
                     if showPortfolio {
                         List{
                             ForEach(homeViewModel.allCryptocurrencies){ crypto in
-                                CryptoRowView(crypto: crypto, showHoldingsColumn: false)
+                                CryptoRowView(crypto: crypto, showHoldingsColumn: true)
                                    .listRowSeparator(.hidden)
                             }
                         }

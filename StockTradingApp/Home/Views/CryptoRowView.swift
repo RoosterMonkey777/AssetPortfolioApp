@@ -47,18 +47,18 @@ struct CryptoRowView: View {
                 Spacer()
 
                 // middle column if applicable
-//                if showHoldingsColumn {
-//                    VStack(alignment: .trailing){
-//                        Text(crypto.currentCoinHoldingsValue.formatAssetPriceToTwo())
-//                            .bold()
-//                        Text((crypto.coinHoldings ?? 0).formatAssetPriceToSix())
-//
-//
-//                    }
-//                    .foregroundColor(Color.theme.primary)
-//
-//
-//                }
+                if showHoldingsColumn {
+                    VStack(alignment: .trailing){
+                        Text(crypto.currentCoinHoldingsValue.formatAssetPriceToTwo())
+                            .bold()
+                        Text((crypto.coinHoldings ?? 0).formatAssetPriceToSix())
+
+
+                    }
+                    .foregroundColor(Color.theme.primary)
+
+
+                }
                 
                 // riight column
                 VStack(alignment: .trailing){
