@@ -47,61 +47,59 @@ import Foundation
 
 struct CryptoModel : Identifiable, Codable {
 
-   
-    
     let id, symbol, name: String
     let image: String
-    let currentPrice: Double?
-    let marketCap: Double?
-    let marketCapRank: Double?
-    let fullyDilutedValuation: Double?
-    let totalVolume: Double?
-    let high24H : Double?
-    let low24H : Double?
-    let priceChange24H: Double?
-    let priceChangePercentage24H: Double?
-    let marketCapChange24H: Double?
-    let marketCapChangePercentage24H: Double?
-    let circulatingSupply: Double?
-    let totalSupply: Double?
-    let maxSupply: Double?
+    let current_price: Double
+    let market_cap: Double?
+    let market_cap_rank: Double?
+    let fully_diluted_valuation: Double?
+    let total_volume: Double?
+    let high_24h : Double?
+    let low_24H : Double?
+    let price_change_24h: Double?
+    let price_change_percentage_24h: Double?
+    let market_cap_change_24h: Double?
+    let market_cap_change_percentage_24h: Double?
+    let circulating_supply: Double?
+    let total_supply: Double?
+    let max_supply: Double?
     let ath: Double?
-    let athChangePercentage: Double?
-    let athDate: String?
+    let ath_change_percentage: Double?
+    let ath_date: String?
     let atl:Double?
-    let atlChangePercentage: Double?
-    let atlDate: String?
-    let lastUpdated: String?
-    let sparklineIn7D: SparklineIn7D?
-    let priceChangePercentage24HInCurrency: Double?
+    let atl_change_percentage: Double?
+    let atl_date: String?
+    let last_updated: String?
+    let sparkline_in_7d: SparklineIn7D?
+    let price_change_percentage_24h_in_currency: Double?
     let coinHoldings: Double? // added on to add functionality on how many coins the user is holding
     
     enum CryptoKeys: String, CodingKey {
         case id, symbol, name
         case image
-        case currentPrice = "current_price"
-        case marketCap = "market_cap"
-        case marketCapRank = "market_cap_rank"
-        case fullyDilutedValuation = "fully_diluted_valuation"
-        case totalVolume = "total_volume"
-        case high24H = "high_24h"
-        case low24H = "low_24h"
-        case priceChange24H = "price_change_24h"
-        case priceChangePercentage24H = "price_change_percentage_24h"
-        case marketCapChange24H = "market_cap_change_24h"
-        case marketCapChangePercentage24H = "market_cap_change_percentage_24h"
-        case circulatingSupply = "circulating_supply"
-        case totalSupply = "total_supply"
-        case maxSupply = "max_supply"
+        case current_price
+        case market_cap
+        case market_cap_rank
+        case fully_diluted_valuation
+        case total_volume
+        case high_24h
+        case low_24h
+        case price_change_24h
+        case price_change_percentage_24h
+        case market_cap_change_24h
+        case market_cap_change_percentage_24h
+        case circulating_supply
+        case total_supply
+        case max_supply
         case ath
-        case athChangePercentage = "ath_change_percentage"
-        case athDate = "ath_date"
+        case ath_change_percentage
+        case ath_date
         case atl
-        case atlChangePercentage = "atl_change_percentage"
-        case atlDate = "atl_date"
-        case lastUpdated = "last_updated"
-        case sparklineIn7D = "sparkline_in_7d"
-        case priceChangePercentage24HInCurrency = "price_change_percentage_24h_in_currency"
+        case atl_change_percentage
+        case atl_date
+        case last_updated
+        case sparkline_in_7d
+        case price_change_percentage_24h_in_currency
         case coinHoldings
     }
     
@@ -140,20 +138,21 @@ struct CryptoModel : Identifiable, Codable {
 //        self.coinHoldings = amount
 //    }
 
-    func updateCoinHoldings(amount: Double) -> CryptoModel {
-        return self
-    }
+//    func updateCoinHoldings(amount: Double) -> CryptoModel {
+//        return self
+//    }
     
     func updateCoinHolding(amount: Double) -> CryptoModel{
-        return CryptoModel(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCap: marketCap, marketCapRank: marketCapRank, fullyDilutedValuation: fullyDilutedValuation, totalVolume: totalVolume, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, marketCapChange24H: marketCapChange24H, marketCapChangePercentage24H: marketCapChangePercentage24H, circulatingSupply: circulatingSupply, totalSupply: totalSupply, maxSupply: maxSupply, ath: ath, athChangePercentage: athChangePercentage, athDate: athDate, atl: atl, atlChangePercentage: atlChangePercentage, atlDate: atlDate, lastUpdated: lastUpdated, sparklineIn7D: sparklineIn7D, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, coinHoldings: amount)
+        return CryptoModel(id: id, symbol: symbol, name: name, image: image, current_price: current_price, market_cap: market_cap, market_cap_rank: market_cap_rank, fully_diluted_valuation: fully_diluted_valuation, total_volume: total_volume, high_24h: high_24h, low_24H: low_24H, price_change_24h: price_change_24h, price_change_percentage_24h: price_change_percentage_24h, market_cap_change_24h: market_cap_change_24h, market_cap_change_percentage_24h: market_cap_change_percentage_24h, circulating_supply: circulating_supply, total_supply: total_supply, max_supply: max_supply, ath: ath, ath_change_percentage: ath_change_percentage, ath_date: ath_date, atl: atl, atl_change_percentage: atl_change_percentage, atl_date: atl_date, last_updated: last_updated, sparkline_in_7d: sparkline_in_7d, price_change_percentage_24h_in_currency: price_change_percentage_24h_in_currency, coinHoldings: amount
+        )
     }
 
     var getRank : Int {
-        return Int(marketCapRank ?? 0)
+        return Int(market_cap_rank ?? 0)
     }
 
     var currentCoinHoldingsValue : Double {
-        return (currentPrice ?? 0) * (coinHoldings ?? 0)
+        return current_price  * (coinHoldings ?? 0)
     }
     
 //    func updateCoin() -> CryptoModel{

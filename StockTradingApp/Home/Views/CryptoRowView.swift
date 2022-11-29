@@ -62,12 +62,12 @@ struct CryptoRowView: View {
                 
                 // riight column
                 VStack(alignment: .trailing){
-                    Text("\(crypto.currentPrice?.formatAssetPriceToSix() ?? "")" )
+                    Text("\(crypto.current_price.formatAssetPriceToSix())" )
                         .bold()
                         .foregroundColor(Color.theme.primary)
-                    Text("\(crypto.priceChangePercentage24H?.formatToPercentString() ?? "") %")
+                    Text("\(crypto.price_change_percentage_24h?.formatToPercentString() ?? "") %")
                         .foregroundColor(
-                            (crypto.priceChangePercentage24H ?? 0) <= 0 ?
+                            (crypto.price_change_percentage_24h ?? 0) <= 0 ?
                             Color.theme.bear :
                             Color.theme.bull
                         )
