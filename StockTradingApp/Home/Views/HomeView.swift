@@ -28,6 +28,9 @@ struct HomeView: View {
                 VStack{
                     homeHeader
                     Divider().background(Color.theme.alien)
+
+                    SearchBarView(searchText: $homeViewModel.searchText)
+                    Divider().background(Color.theme.alien)
                     HStack{
                         Text("Asset")
                         Spacer()

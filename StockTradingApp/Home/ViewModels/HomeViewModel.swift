@@ -21,6 +21,8 @@ class HomeViewModel: ObservableObject {
     @Published var allCryptocurrencies : [CryptoModel] = []
     @Published var portfolioCryptoCurrencies : [CryptoModel] = []
     
+    @Published var searchText: String = ""
+    
     init() {
         // call the api through dispathqueue
         fetchCryptoCurrencyApi()
