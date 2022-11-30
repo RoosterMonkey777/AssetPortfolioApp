@@ -30,6 +30,7 @@ struct SearchBarView: View {
                         .foregroundColor(Color.theme.alien)
                         .opacity(searchText.isEmpty ? 0.0 : 0.80)
                         .onTapGesture {
+                            UIApplication.shared.dismissKeyboard()
                             searchText = ""
                             
                         }
@@ -43,7 +44,7 @@ struct SearchBarView: View {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color.theme.background)
                 .shadow(
-                    color: Color.theme.alien.opacity(0.50),
+                    color: Color.theme.primary.opacity(0.80),
                     radius: 5
                 )
         )

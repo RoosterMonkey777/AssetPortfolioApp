@@ -27,9 +27,8 @@ struct HomeView: View {
                 // content stuff
                 VStack{
                     homeHeader
-                    Divider().background(Color.theme.alien)
+                    //Divider().background(Color.theme.alien)
 
-                    SearchBarView(searchText: $homeViewModel.searchText)
                     Divider().background(Color.theme.alien)
                     HStack{
                         Text("Asset")
@@ -73,11 +72,25 @@ struct HomeView: View {
 
                     }
                     
-                    
+                     
                      Spacer(minLength: 0)
                 }
                 .sheet(isPresented: $showUserProfile){UserProfileView()} //show user profile
-           
+                
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        Spacer()
+                        SearchBarView(searchText: $homeViewModel.searchText)
+                    }
+                }
+                
+
+                
+                    
+                    
+
         }
     }
 }

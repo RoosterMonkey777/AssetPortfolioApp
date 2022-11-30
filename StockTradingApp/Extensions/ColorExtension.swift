@@ -278,3 +278,11 @@ class DeveloperPreview{
     )
 
 }
+
+// to get rid of the keyboard from 'x' tap gesture on search bar
+extension UIApplication{
+    
+    func dismissKeyboard() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
