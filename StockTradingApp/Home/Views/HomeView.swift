@@ -51,7 +51,7 @@ struct HomeView: View {
                     if showPortfolio {
                         List{
                             ForEach(homeViewModel.allCryptocurrencies){ crypto in
-                                CryptoRowView(crypto: crypto, showHoldingsColumn: true)
+                                CryptoRowView(crypto: crypto, showHoldingsColumn: true, urlString: crypto.image)
                                    .listRowSeparator(.hidden)
                             }
                         }
@@ -61,7 +61,7 @@ struct HomeView: View {
                     if !showPortfolio{
                         List{
                             ForEach(homeViewModel.portfolioCryptoCurrencies){ crypto in
-                                CryptoRowView(crypto: crypto, showHoldingsColumn: false)
+                                CryptoRowView(crypto: crypto, showHoldingsColumn: false, urlString: crypto.image)
                                    .listRowSeparator(.hidden)
                             }
                         }
@@ -91,7 +91,10 @@ extension HomeView {
                     RippleAnimation(animate: $rippleAnimation)
                 )
                 .onTapGesture {
-                    showUserProfile.toggle()
+                    if showPortfolio{
+                        showUserProfile.toggle()
+                    }
+                    
                 }
     
             Spacer()

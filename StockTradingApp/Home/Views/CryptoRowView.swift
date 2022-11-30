@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct CryptoRowView: View {
-    
+    @StateObject var homeViewModel = HomeViewModel.shared
+
     let crypto : CryptoModel
     let showHoldingsColumn : Bool
+    let urlString : String
     
     var body: some View {
         
@@ -34,9 +36,10 @@ struct CryptoRowView: View {
                             .foregroundColor(Color.theme.primary)
                     }
                     
-                    Circle()
+                    AssetImageView(urlString: urlString, data: nil)
                         .frame(width: 50, height: 50)
                         .padding(.horizontal)
+    
                     
                     Text(crypto.name.uppercased())
                         .font(.headline)
