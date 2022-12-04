@@ -86,12 +86,6 @@ struct HomeView: View {
                         SearchBarView(searchText: $homeViewModel.searchText)
                     }
                 }
-                
-
-                
-                    
-                    
-
         }
     }
 }

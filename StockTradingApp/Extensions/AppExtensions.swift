@@ -22,17 +22,17 @@ extension Double {
     
     private var currencyFormatter2 : NumberFormatter {
         let formatter = NumberFormatter()
-        formatter.usesGroupingSeparator = true
-        formatter.numberStyle = .currency
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
         formatter.locale = .current
         formatter.currencyCode = "cad"
         formatter.currencySymbol = "$"
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 2
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .currency
+        
         return formatter
-        
-        
     }
+    
     func formatAssetPriceToTwo() -> String {
         let number = NSNumber(value: self)
         return currencyFormatter.string(from: number) ?? "0.00"
@@ -40,16 +40,14 @@ extension Double {
     
     private var currencyFormatter : NumberFormatter {
         let formatter = NumberFormatter()
-        formatter.usesGroupingSeparator = true
-        formatter.numberStyle = .currency
         formatter.locale = .current
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 5
         formatter.currencyCode = "cad"
         formatter.currencySymbol = "$"
-        formatter.minimumFractionDigits = 2
-        formatter.maximumFractionDigits = 6
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .currency
         return formatter
-        
-        
     }
     func formatAssetPriceToSix() -> String {
         let number = NSNumber(value: self)
@@ -60,6 +58,9 @@ extension Double {
         return String(format: "%.2f", self)
     }
     
+    func asPercentString() -> String {
+            return formatToPercentString() + "%"
+        }
     
 }
 
@@ -73,6 +74,10 @@ extension PreviewProvider {
 class DeveloperPreview{
     static let shared_preview = DeveloperPreview()
     private init(){}
+    
+    let holder1 = MarketTabModel(header: "Market Cap", val: "12.5Bn", percChange: 25.34)
+    let holder2 = MarketTabModel(header: "Canadian Dollar", val: "1.2Bn")
+    let holder3 = MarketTabModel(header: "Apple", val: "2.2Tn", percChange: -5.24)
     
     let homeVM = HomeViewModel()
     

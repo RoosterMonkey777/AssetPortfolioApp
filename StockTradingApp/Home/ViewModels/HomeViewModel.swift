@@ -33,7 +33,9 @@ class HomeViewModel: ObservableObject {
     }
     
     func addEventListener() {
-                
+        
+
+        
         $searchText
             .combineLatest(ds.$allCoins)
             .map { (text, start) -> [CryptoModel] in
