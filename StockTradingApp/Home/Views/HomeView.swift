@@ -52,17 +52,18 @@ struct HomeView: View {
                     
                     if showPortfolio {
                         List{
-                            ForEach(homeViewModel.allCryptocurrencies){ crypto in
+                            ForEach(homeViewModel.allCoins){ crypto in
                                 CryptoRowView(crypto: crypto, showHoldingsColumn: true, urlString: crypto.image)
                                    .listRowSeparator(.hidden)
                             }
                         }
+                        
                         .listStyle(.plain)
                         .transition(.move(edge:  .leading))
                     }
                     if !showPortfolio{
                         List{
-                            ForEach(homeViewModel.portfolioCryptoCurrencies){ crypto in
+                            ForEach(homeViewModel.allCoins){ crypto in
                                 CryptoRowView(crypto: crypto, showHoldingsColumn: false, urlString: crypto.image)
                                    .listRowSeparator(.hidden)
                             }
@@ -143,10 +144,10 @@ extension HomeView {
 
         VStack{
             if !showPortfolio {
-                Text("LIVE PRICES")
+                Text("LIVE MARKET")
             }
             else {
-                Text("Portfolio")
+                Text("PORTFOLIO")
 //                if !welcomeTextSwitch {
 //                    Text("PORTFOLIO")
 //                } else {

@@ -7,7 +7,7 @@
 import SwiftUI
 import Foundation
 import UIKit
-
+import Combine
 
 
 class HomeViewModel: ObservableObject {
@@ -16,17 +16,47 @@ class HomeViewModel: ObservableObject {
     //var apiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=3&page=1&sparkline=true&price_change_percentage=24h"
     
     static let shared = HomeViewModel()
+    @Published var allCoins : [CryptoModel] = []
+    private let ds = AssetService()
+    private var cancellables = Set<AnyCancellable>()
+    
+    @Published var searchText: String = ""
     
     @Published var cryptoList = [CryptoModel]()
     @Published var allCryptocurrencies : [CryptoModel] = []
     @Published var portfolioCryptoCurrencies : [CryptoModel] = []
     
-    @Published var searchText: String = ""
-    
     init() {
         // call the api through dispathqueue
-        fetchCryptoCurrencyApi()
+        // fetchCryptoCurrencyApi()
+        addEventListener()
     }
+    
+    func addEventListener() {
+                
+        $searchText
+            .combineLatest(ds.$allCoins)
+            .map { (text, start) -> [CryptoModel] in
+               
+                guard !text.isEmpty else {
+                    return start
+                }
+                
+                let lowercasedText = text.lowercased()
+                
+                let filteredAssets = start.filter { asset -> Bool in
+                    return asset.name.lowercased().contains(lowercasedText) ||
+                    asset.symbol.lowercased().contains(lowercasedText) ||
+                    asset.id.lowercased().contains(lowercasedText)
+                }
+                return filteredAssets
+            }
+            .sink { [weak self] (returnedCoins) in
+                self?.allCoins = returnedCoins
+            }
+            .store(in: &cancellables)
+    }
+    
     
     private func fetchCryptoCurrencyApi(){
         

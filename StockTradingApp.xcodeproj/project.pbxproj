@@ -33,6 +33,8 @@
 		58C88DCD2935941400930178 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCC2935941400930178 /* HomeViewModel.swift */; };
 		58C88DCF2936D9DE00930178 /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCE2936D9DE00930178 /* AssetImageView.swift */; };
 		58C88DD82937C7C600930178 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DD72937C7C600930178 /* SearchBarView.swift */; };
+		58C88DDC293D1BD300930178 /* AssetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDB293D1BD300930178 /* AssetService.swift */; };
+		58C88DDE293D340200930178 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDD293D340200930178 /* NetworkModel.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		58C88DCC2935941400930178 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		58C88DCE2936D9DE00930178 /* AssetImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetImageView.swift; sourceTree = "<group>"; };
 		58C88DD72937C7C600930178 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		58C88DDB293D1BD300930178 /* AssetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetService.swift; sourceTree = "<group>"; };
+		58C88DDD293D340200930178 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				58C88DC52932FD2500930178 /* EquityModel.swift */,
 				58C88DC8293542FE00930178 /* CryptoModel.swift */,
+				58C88DDB293D1BD300930178 /* AssetService.swift */,
+				58C88DDD293D340200930178 /* NetworkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C88DDE293D340200930178 /* NetworkModel.swift in Sources */,
 				58C88DBC2932BCAB00930178 /* SignUpView.swift in Sources */,
 				58C88DBA2932BC9D00930178 /* MainView.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
@@ -344,6 +351,7 @@
 				58C88DC12932BD0C00930178 /* ViewRouter.swift in Sources */,
 				58C88DD82937C7C600930178 /* SearchBarView.swift in Sources */,
 				58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */,
+				58C88DDC293D1BD300930178 /* AssetService.swift in Sources */,
 				58C88DBE2932BCC600930178 /* SignInView.swift in Sources */,
 				58C88D872931BD9900930178 /* RippleAnimation.swift in Sources */,
 			);
