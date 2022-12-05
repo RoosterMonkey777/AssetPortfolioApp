@@ -26,6 +26,13 @@ class HomeViewModel: ObservableObject {
     @Published var allCryptocurrencies : [CryptoModel] = []
     @Published var portfolioCryptoCurrencies : [CryptoModel] = []
     
+    @Published var  markets : [MarketTabModel] = [
+        MarketTabModel(header: "title 1", val: "value 1", percChange: 10.0),
+        MarketTabModel(header: "title 2", val: "value 2"),
+        MarketTabModel(header: "title 3", val: "value 3", percChange: -13.2),
+        MarketTabModel(header: "title 4", val: "value 4", percChange: 3.2)
+    ]
+    
     init() {
         // call the api through dispathqueue
         // fetchCryptoCurrencyApi()

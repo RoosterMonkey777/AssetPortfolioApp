@@ -16,7 +16,7 @@ struct MarketTabView: View {
                 .fontWeight(.semibold)
                 .foregroundColor(Color.theme.secondary)
             Text(holder.val)
-                .foregroundColor(Color.theme.primary)
+                .foregroundColor(Color.theme.alien)
                 .fontWeight(.heavy)
                 .font(.title2)
             

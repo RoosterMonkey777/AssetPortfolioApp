@@ -11,6 +11,8 @@ struct HomeView: View {
     @EnvironmentObject private var viewRouter: ViewRouter
     
     @State private var showPortfolio : Bool = true
+    @State private var showSearchBar : Bool = false
+    @State private var showMarketTab : Bool = true
     @State private var rippleAnimation : Bool = false
     @State private var showUserProfile : Bool = false // sheet for user profile settings
     
@@ -26,18 +28,28 @@ struct HomeView: View {
                 
                 // content stuff
                 VStack{
+                    
                     homeHeader
-                    //Divider().background(Color.theme.alien)
-
                     Divider().background(Color.theme.alien)
+                    
+                    if showSearchBar {
+                        SearchBarView(searchText: $homeViewModel.searchText)
+                        Divider().background(Color.theme.alien)
+                    }
+                    
+                    if showMarketTab {
+                        MarketTabFullView(showPortfolio: $showPortfolio)
+                        Divider().background(Color.theme.alien)
+                    }
+                    
                     HStack{
-                        Text("Asset")
+                        Text("asset")
                         Spacer()
                         if showPortfolio{
-                            Text("Shares")
+                            Text("shares")
                         }
                         
-                        Text("Price")
+                        Text("price")
                             .frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing) //1/3 of the screen
                     }
                     .font(.body)
@@ -81,10 +93,10 @@ struct HomeView: View {
                 VStack {
                     Spacer()
                     
-                    HStack {
-                        Spacer()
-                        SearchBarView(searchText: $homeViewModel.searchText)
-                    }
+//                    HStack {
+//                        Spacer()
+//                        SearchBarView(searchText: $homeViewModel.searchText)
+//                    }
                 }
         }
     }
@@ -93,44 +105,62 @@ struct HomeView: View {
 extension HomeView {
 
     private var homeHeader: some View {
-        HStack{
+        VStack {
             
-            // button on left side
-            CircleButtonView(iconToUse: showPortfolio ? "person.fill" : "plus")
-                .animation(.none, value: showPortfolio)
-                .background(
-                    RippleAnimation(animate: $rippleAnimation)
-                )
-                .onTapGesture {
-                    if showPortfolio{
-                        showUserProfile.toggle()
-                    }
-                    
-                }
-    
-            Spacer()
             
             // middle text
             welcomeText
+                .padding(.top)
 //                .onAppear{
 //                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { // say welcome user then wait 2 seconds
 //                        self.welcomeTextSwitch.toggle()
 //                    }
 //                }
-            Spacer()
             
-            // button on right side
-            CircleButtonView(iconToUse: "arrow.right")
-                .rotationEffect(Angle(degrees: showPortfolio ? 0 : -180))
-                .onTapGesture {
-                    //showPortfolio.toggle()
-                    withAnimation(.spring()){ // gives it that smooth transition
-                        showPortfolio.toggle()
-                        rippleAnimation.toggle()
+            HStack(spacing: 25){
+                
+                // button on left side
+                CircleButtonView(iconToUse: showPortfolio ? "person.fill" : "plus")
+                    .animation(.none, value: showPortfolio)
+                    .background(
+                        RippleAnimation(animate: $rippleAnimation)
+                    )
+                    .onTapGesture {
+                        if showPortfolio{
+                            showUserProfile.toggle()
+                        }
+                        
                     }
-                }
+                
+                
+        
+
+                
+                CircleButtonView(iconToUse: "chart.line.uptrend.xyaxis")
+                    .onTapGesture {
+                        showMarketTab.toggle()
+                    }
+                    .animation(.none, value: showMarketTab)
+                
+                CircleButtonView(iconToUse: "magnifyingglass")
+                    .onTapGesture {
+                        showSearchBar.toggle()
+                    }
+                    .animation(.none, value: showSearchBar)
+                
+                // button on right side
+                CircleButtonView(iconToUse: "arrow.right")
+                    .rotationEffect(Angle(degrees: showPortfolio ? 0 : -180))
+                    .onTapGesture {
+                        //showPortfolio.toggle()
+                        withAnimation(.spring()){ // gives it that smooth transition
+                            showPortfolio.toggle()
+                            rippleAnimation.toggle()
+                        }
+                    }
+            }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
     
     
@@ -162,9 +192,9 @@ extension HomeView {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//
+//        HomeView()
+//    }
+//}

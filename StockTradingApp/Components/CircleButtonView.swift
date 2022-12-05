@@ -12,12 +12,12 @@ struct CircleButtonView: View {
             .font(.title2)
             .frame(width: 50, height: 50)
             .background(
-                Circle()
+                RoundedRectangle(cornerRadius: 100)
                     .foregroundColor(Color.theme.background)
             )
             .shadow(
                 color: Color.theme.alien.opacity(0.4),
-                radius: 10, x:0, y:0)
+                radius: 9, x:0, y:0)
             .padding()
     }
 }

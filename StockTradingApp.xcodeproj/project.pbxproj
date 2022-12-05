@@ -37,6 +37,7 @@
 		58C88DDE293D340200930178 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDD293D340200930178 /* NetworkModel.swift */; };
 		58C88DE0293D4B7500930178 /* MarketTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDF293D4B7500930178 /* MarketTabModel.swift */; };
 		58C88DE2293D578900930178 /* MarketTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DE1293D578900930178 /* MarketTabView.swift */; };
+		58C88DE4293D689A00930178 /* MarketTabFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DE3293D689A00930178 /* MarketTabFullView.swift */; };
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		58C88DDD293D340200930178 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		58C88DDF293D4B7500930178 /* MarketTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTabModel.swift; sourceTree = "<group>"; };
 		58C88DE1293D578900930178 /* MarketTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTabView.swift; sourceTree = "<group>"; };
+		58C88DE3293D689A00930178 /* MarketTabFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTabFullView.swift; sourceTree = "<group>"; };
 		58ED8EA928EE0932007555B6 /* StockTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				58C88DCE2936D9DE00930178 /* AssetImageView.swift */,
 				58C88DD72937C7C600930178 /* SearchBarView.swift */,
 				58C88DE1293D578900930178 /* MarketTabView.swift */,
+				58C88DE3293D689A00930178 /* MarketTabFullView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				58C88DBA2932BC9D00930178 /* MainView.swift in Sources */,
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
 				58C88DCD2935941400930178 /* HomeViewModel.swift in Sources */,
+				58C88DE4293D689A00930178 /* MarketTabFullView.swift in Sources */,
 				58C88D7729312C7600930178 /* AppExtensions.swift in Sources */,
 				58C88DE2293D578900930178 /* MarketTabView.swift in Sources */,
 				58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */,
