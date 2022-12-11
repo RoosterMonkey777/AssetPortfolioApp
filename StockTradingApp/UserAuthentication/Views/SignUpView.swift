@@ -85,6 +85,15 @@ struct SignUpView: View {
                 signUpProcessing = false
             case .some(_):
                 print("User created")
+                
+                if( authResult != nil){
+                    //FIRUser
+                    print(#function, "User Info : \(authResult!.user.email ?? "NA")")
+                    print(#function, "User displayName : \(authResult!.user.displayName ?? "NA")")
+                    
+                    UserDefaults.standard.set(authResult!.user.email, forKey: "KEY_EMAIL")
+                }
+                
                 signUpProcessing = false
                 viewRouter.currentPage = .homePage
             }

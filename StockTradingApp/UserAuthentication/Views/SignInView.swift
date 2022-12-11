@@ -84,6 +84,14 @@ struct SignInView: View {
                 signInProcessing = false
             case .some(_):
                 print("Success: the User signed in")
+                
+                if( authResult != nil){
+                    //FIRUser
+                    print(#function, "User Info : \(authResult!.user.email ?? "NA")")
+                    print(#function, "User displayName : \(authResult!.user.displayName ?? "NA")")
+                    
+                    UserDefaults.standard.set(authResult!.user.email, forKey: "KEY_EMAIL")
+                }
                 signInProcessing = false
                 withAnimation {
                     viewRouter.currentPage = .homePage

@@ -150,7 +150,7 @@ struct UserPortfolioView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(Color.theme.primary)
                     })
-                    .opacity( ( selectedAsset?.coinHoldings != 0 && selectedAsset != nil && selectedAsset?.coinHoldings != Double(quantity)) ?  1 : 0)
+                    .opacity( ( selectedAsset != nil && selectedAsset?.coinHoldings != Double(quantity)) ?  1 : 0)
                    
                 }
             }
