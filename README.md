@@ -22,10 +22,8 @@ For now we are going to try to implement these functionalities in our MVP as we 
 
 Since we are in the early stages of project development, and our group was very recently made, our job duties are still pretty vague as we analyze detailed requirements for our project. For now we have three main modules to assign to team members, these include: UI, backend/database, and API connection. 
 
-Zahaak: Responsible for incorporating the backend through the business logic/ data model classes and database connection. 
+Zahaak: Responsible for API calls and incorporating the backend through the business logic/ data model classes and database connection. 
 
-Shareef: Responsible for UI related duties. Including changes in User experience, navigation through the app, and visually appealing views.
-
-Erdem: Responsible for getting Stock information or other necessary data through APIs and connecting to our app. 
+Shareef: Responsible for UI related duties and creating Watch app. Including changes in User experience, navigation through the app, and visually appealing views. 
 
 ** Roles and duties subject to change ** 
