@@ -6,6 +6,7 @@ import Firebase
 struct MainView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
+    //let fireDBHelper = FireDBHelper(database: Firestore.firestore())
     
     var body: some View {
         switch viewRouter.currentPage {
@@ -15,13 +16,15 @@ struct MainView: View {
             SignInView()
         case .homePage:
             HomeView()
+                //.environmentObject(fireDBHelper)
         }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView().environmentObject(ViewRouter())
+        MainView()
+            .environmentObject(ViewRouter())
     }
 }
 

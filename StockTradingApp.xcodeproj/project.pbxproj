@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5819928129455D9600C4C764 /* UserPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5819928029455D9600C4C764 /* UserPortfolioView.swift */; };
 		58199283294642F100C4C764 /* AssetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58199282294642F100C4C764 /* AssetIconView.swift */; };
+		581992852946889500C4C764 /* AssetDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581992842946889500C4C764 /* AssetDBModel.swift */; };
+		581992872946898800C4C764 /* FireDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581992862946898800C4C764 /* FireDBHelper.swift */; };
 		588598DE2929D41E006FC002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588598DD2929D41E006FC002 /* GoogleService-Info.plist */; };
 		588598E12929D52A006FC002 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E02929D52A006FC002 /* FirebaseAnalytics */; };
 		588598E32929D52A006FC002 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E22929D52A006FC002 /* FirebaseAnalyticsSwift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		5819928029455D9600C4C764 /* UserPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPortfolioView.swift; sourceTree = "<group>"; };
 		58199282294642F100C4C764 /* AssetIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetIconView.swift; sourceTree = "<group>"; };
+		581992842946889500C4C764 /* AssetDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDBModel.swift; sourceTree = "<group>"; };
+		581992862946898800C4C764 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
 		588598DD2929D41E006FC002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		588598E8292AABB0006FC002 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		588598EA292AAC47006FC002 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 				58C88DDB293D1BD300930178 /* AssetService.swift */,
 				58C88DDD293D340200930178 /* NetworkModel.swift */,
 				58C88DDF293D4B7500930178 /* MarketTabModel.swift */,
+				581992842946889500C4C764 /* AssetDBModel.swift */,
+				581992862946898800C4C764 /* FireDBHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,8 +369,10 @@
 				588598EF292AAF5B006FC002 /* AuthenticationView.swift in Sources */,
 				588598F3292AB03B006FC002 /* SignupView.swift in Sources */,
 				58C88DCB2935653300930178 /* CryptoRowView.swift in Sources */,
+				581992872946898800C4C764 /* FireDBHelper.swift in Sources */,
 				588598E9292AABB0006FC002 /* AuthenticatedView.swift in Sources */,
 				58C88DCF2936D9DE00930178 /* AssetImageView.swift in Sources */,
+				581992852946889500C4C764 /* AssetDBModel.swift in Sources */,
 				58199283294642F100C4C764 /* AssetIconView.swift in Sources */,
 				58C88DC9293542FE00930178 /* CryptoModel.swift in Sources */,
 				588598EB292AAC47006FC002 /* HomePageView.swift in Sources */,
