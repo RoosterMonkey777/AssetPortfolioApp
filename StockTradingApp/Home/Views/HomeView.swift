@@ -7,6 +7,9 @@ struct HomeView: View {
     
     //@EnvironmentObject private var homeViewModel : HomeViewModel
     @StateObject var homeViewModel = HomeViewModel.shared
+    
+    @EnvironmentObject var fireDBHelper : FireDBHelper
+
 
     @EnvironmentObject private var viewRouter: ViewRouter
     
@@ -64,15 +67,41 @@ struct HomeView: View {
                     
                     
                     if showPortfolio {
-                        List{
-                            ForEach(homeViewModel.allCoins){ crypto in
-                                CryptoRowView(crypto: crypto, showHoldingsColumn: true, urlString: crypto.image)
-                                   .listRowSeparator(.hidden)
-                            }
-                        }
+//                        List{
+//                            ForEach(homeViewModel.allCoins){ crypto in
+//                                CryptoRowView(crypto: crypto, showHoldingsColumn: true, urlString: crypto.image)
+//                                   .listRowSeparator(.hidden)
+//                            }
+//                        }
+//                        .listStyle(.plain)
+//                        .transition(.move(edge:  .leading))
                         
-                        .listStyle(.plain)
-                        .transition(.move(edge:  .leading))
+                        List{
+                            ForEach(self.fireDBHelper.assetList){currentAsset in
+
+                                VStack(alignment: .leading){
+                                    Text("\(currentAsset.coinId)")
+                                        .fontWeight(.bold)
+
+                                    Text("by \(currentAsset.amount)")
+                                        .italic()
+                                }
+
+                            }//ForEach
+                            .onDelete(perform: {indexSet in
+                                for index in indexSet{
+                                    print(#function, "Asset to delete : \(self.fireDBHelper.assetList[index].coinId)")
+
+                                    self.fireDBHelper.removeAsset(assettoRemove: self.fireDBHelper.assetList[index])
+
+                                }
+                            })
+                            
+                        }
+                        .onAppear(){
+                            //get all books from DB
+                            self.fireDBHelper.getAllAssets()
+                        }
                     }
                     if !showPortfolio{
                         List{

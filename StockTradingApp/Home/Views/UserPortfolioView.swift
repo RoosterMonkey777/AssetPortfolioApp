@@ -11,6 +11,9 @@ struct UserPortfolioView: View {
     
     @Environment(\.presentationMode) var pm
     @EnvironmentObject private var viewModel : HomeViewModel
+    @EnvironmentObject var fireDBHelper : FireDBHelper
+
+    
     @State var selectedAsset : CryptoModel? = nil
     @State var quantity : String = "0"
     var body: some View {
@@ -159,9 +162,15 @@ struct UserPortfolioView: View {
     }
     private func saveHoldings() {
         guard let asset = selectedAsset
-            else {return}
+        else {return}
         
-        // save logic
+        let newAsset = AssetDBModel(coinId: (asset.id), amount: (asset.coinHoldings ?? 0))
+        self.fireDBHelper.insertAsset(newAsset: newAsset)
+        
+        
+        //dismiss currently presented view
+        //dismiss()
+        
         selectedAsset = nil
         viewModel.searchText = ""
         UIApplication.shared.dismissKeyboard()

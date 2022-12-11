@@ -11,6 +11,7 @@
 		58199283294642F100C4C764 /* AssetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58199282294642F100C4C764 /* AssetIconView.swift */; };
 		581992852946889500C4C764 /* AssetDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581992842946889500C4C764 /* AssetDBModel.swift */; };
 		581992872946898800C4C764 /* FireDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581992862946898800C4C764 /* FireDBHelper.swift */; };
+		5819928A29468DA700C4C764 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5819928929468DA700C4C764 /* FirebaseFirestoreSwift */; };
 		588598DE2929D41E006FC002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588598DD2929D41E006FC002 /* GoogleService-Info.plist */; };
 		588598E12929D52A006FC002 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E02929D52A006FC002 /* FirebaseAnalytics */; };
 		588598E32929D52A006FC002 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E22929D52A006FC002 /* FirebaseAnalyticsSwift */; };
@@ -107,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5819928A29468DA700C4C764 /* FirebaseFirestoreSwift in Frameworks */,
 				588598E32929D52A006FC002 /* FirebaseAnalyticsSwift in Frameworks */,
 				588598E72929D52A006FC002 /* FirebaseFirestore in Frameworks */,
 				588598E52929D52A006FC002 /* FirebaseAuth in Frameworks */,
@@ -124,6 +126,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5819928829468DA700C4C764 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58C88D7529312C6000930178 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +267,7 @@
 				58ED8EAA28EE0932007555B6 /* Products */,
 				58ED8EBA28EE0BCC007555B6 /* README.md */,
 				58ED8EAB28EE0932007555B6 /* StockTradingApp */,
+				5819928829468DA700C4C764 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +346,7 @@
 				588598E22929D52A006FC002 /* FirebaseAnalyticsSwift */,
 				588598E42929D52A006FC002 /* FirebaseAuth */,
 				588598E62929D52A006FC002 /* FirebaseFirestore */,
+				5819928929468DA700C4C764 /* FirebaseFirestoreSwift */,
 			);
 			productName = StockTradingApp;
 			productReference = 58ED8EA928EE0932007555B6 /* StockTradingApp.app */;
@@ -756,6 +767,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5819928929468DA700C4C764 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 588598DF2929D52A006FC002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		588598E02929D52A006FC002 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 588598DF2929D52A006FC002 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

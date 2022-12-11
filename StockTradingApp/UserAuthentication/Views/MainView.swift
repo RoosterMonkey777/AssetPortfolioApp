@@ -6,7 +6,7 @@ import Firebase
 struct MainView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
-    //let fireDBHelper = FireDBHelper(database: Firestore.firestore())
+    let fireDBHelper = FireDBHelper(database: Firestore.firestore())
     
     var body: some View {
         switch viewRouter.currentPage {
@@ -16,7 +16,7 @@ struct MainView: View {
             SignInView()
         case .homePage:
             HomeView()
-                //.environmentObject(fireDBHelper)
+                .environmentObject(fireDBHelper)
         }
     }
 }
