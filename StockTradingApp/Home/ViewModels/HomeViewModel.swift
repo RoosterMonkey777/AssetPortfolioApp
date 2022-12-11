@@ -13,7 +13,7 @@ import Combine
 class HomeViewModel: ObservableObject {
     
     var apiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h"
-    //var apiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=3&page=1&sparkline=true&price_change_percentage=24h"
+    var WatchapiURL : String = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=3&page=1&sparkline=true&price_change_percentage=24h"
     
     static let shared = HomeViewModel()
     @Published var allCoins : [CryptoModel] = []
@@ -26,6 +26,10 @@ class HomeViewModel: ObservableObject {
     @Published var allCryptocurrencies : [CryptoModel] = []
     @Published var portfolioCryptoCurrencies : [CryptoModel] = []
     
+    @Published var cryptoWatchList = [CryptoModel]()
+    @Published var allWatchCryptocurrencies : [CryptoModel] = []
+    @Published var portfolioWatchCryptoCurrencies : [CryptoModel] = []
+    
     @Published var  markets : [MarketTabModel] = [
         MarketTabModel(header: "title 1", val: "value 1", percChange: 10.0),
         MarketTabModel(header: "title 2", val: "value 2"),
@@ -35,7 +39,7 @@ class HomeViewModel: ObservableObject {
     
     init() {
         // call the api through dispathqueue
-        // fetchCryptoCurrencyApi()
+        fetchCryptoWatchCurrencyApi()
         addEventListener()
     }
     
@@ -152,6 +156,68 @@ class HomeViewModel: ObservableObject {
         }
         task.resume()
         
+    }
+    
+    //fetching the data for the WatchApp
+    private func fetchCryptoWatchCurrencyApi(){
+            
+            print("Fetching data from Coingecko API")
+            guard let api = URL(string: WatchapiURL) else {
+                print(#function, "Error retrieving URL from string")
+                return
+            }
+            
+            let task = URLSession.shared.dataTask(with: api){ (data: Data?, response: URLResponse?, error: Error?) in
+                if let error = error{
+                    print(#function, "Unable to connect to Web Services: \(error)")
+                } else {
+                    
+                    if let httpResponse = response as? HTTPURLResponse{
+                        if httpResponse.statusCode == 200{
+                            //200 response OK
+                            DispatchQueue.global().async{
+                                do{
+                                    
+                                    if (data != nil){
+                                        
+                                        if let jsonData = data{
+                                            
+                                            //perform decoding
+                                            let decoder = JSONDecoder()
+                                            
+                                            //decoder tries to find single object
+                                            let decodedCrypto = try decoder.decode([CryptoModel].self, from: jsonData)
+                                            
+                                            print(#function, decodedCrypto)
+                                            
+                                               
+                                            DispatchQueue.main.async {
+                                                self.cryptoWatchList = decodedCrypto
+                                                self.allWatchCryptocurrencies.append(contentsOf: decodedCrypto)
+                                                self.portfolioWatchCryptoCurrencies.append(contentsOf: decodedCrypto)
+                                            }
+                                            
+                                        }else{
+                                            print(#function, "Unable to obtain jsonData")
+                                        }
+                                    }else{
+                                        print(#function, "No data with response code 200")
+                                    }
+                                }catch let error{
+                                    print(#function, "No data received \(error)")
+                                }
+                            }
+
+                        }else{
+                            print(#function, "HTTP Response status code : \(httpResponse.statusCode)")
+                        }
+                        
+                    }else {
+                        print(#function, "Unable to receive any response from network call")
+                    }
+                }
+            }
+            task.resume()
     }
     
     private func fetchImage(from url : URL, withCompletion completion: @escaping (Data?) -> Void){

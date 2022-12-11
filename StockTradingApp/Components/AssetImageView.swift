@@ -17,7 +17,11 @@ struct AssetImageView : View {
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                #if os(watchOS)
+                .frame(width: 25, height: 25)
+                #else
                 .frame(width: 50, height: 50)
+                #endif
                 .scaledToFit()
                 .onAppear{
                     fetchImageData()

@@ -43,6 +43,17 @@
 		58ED8EAD28EE0932007555B6 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ED8EAC28EE0932007555B6 /* StockTradingApp.swift */; };
 		58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB028EE0932007555B6 /* Assets.xcassets */; };
 		58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */; };
+		70B9C91C294688E300C8D595 /* StockTradingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9C91B294688E300C8D595 /* StockTradingApp.swift */; };
+		70B9C91E294688E300C8D595 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9C91D294688E300C8D595 /* ContentView.swift */; };
+		70B9C920294688E500C8D595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B9C91F294688E500C8D595 /* Assets.xcassets */; };
+		70B9C923294688E500C8D595 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B9C922294688E500C8D595 /* Preview Assets.xcassets */; };
+		70B9C9272946891A00C8D595 /* EquityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC52932FD2500930178 /* EquityModel.swift */; };
+		70B9C9282946891C00C8D595 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC8293542FE00930178 /* CryptoModel.swift */; };
+		70B9C9292946891E00C8D595 /* AssetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDB293D1BD300930178 /* AssetService.swift */; };
+		70B9C92A2946892000C8D595 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDD293D340200930178 /* NetworkModel.swift */; };
+		70B9C92B2946892200C8D595 /* MarketTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDF293D4B7500930178 /* MarketTabModel.swift */; };
+		70B9C92C2946894400C8D595 /* AssetImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCE2936D9DE00930178 /* AssetImageView.swift */; };
+		70B9C92D2946894700C8D595 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCC2935941400930178 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +91,11 @@
 		58ED8EB028EE0932007555B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58ED8EB328EE0932007555B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58ED8EBA28EE0BCC007555B6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		70B9C919294688E300C8D595 /* StockTrading Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockTrading Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B9C91B294688E300C8D595 /* StockTradingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTradingApp.swift; sourceTree = "<group>"; };
+		70B9C91D294688E300C8D595 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		70B9C91F294688E500C8D595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70B9C922294688E500C8D595 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +107,13 @@
 				588598E72929D52A006FC002 /* FirebaseFirestore in Frameworks */,
 				588598E52929D52A006FC002 /* FirebaseAuth in Frameworks */,
 				588598E12929D52A006FC002 /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B9C916294688E300C8D595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +248,7 @@
 		58ED8EA028EE0932007555B6 = {
 			isa = PBXGroup;
 			children = (
+				70B9C91A294688E300C8D595 /* StockTrading Watch App */,
 				58ED8EAA28EE0932007555B6 /* Products */,
 				58ED8EBA28EE0BCC007555B6 /* README.md */,
 				58ED8EAB28EE0932007555B6 /* StockTradingApp */,
@@ -235,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				58ED8EA928EE0932007555B6 /* StockTradingApp.app */,
+				70B9C919294688E300C8D595 /* StockTrading Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,6 +290,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		70B9C91A294688E300C8D595 /* StockTrading Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				70B9C91B294688E300C8D595 /* StockTradingApp.swift */,
+				70B9C91D294688E300C8D595 /* ContentView.swift */,
+				70B9C91F294688E500C8D595 /* Assets.xcassets */,
+				70B9C921294688E500C8D595 /* Preview Content */,
+			);
+			path = "StockTrading Watch App";
+			sourceTree = "<group>";
+		};
+		70B9C921294688E500C8D595 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				70B9C922294688E500C8D595 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +335,23 @@
 			productReference = 58ED8EA928EE0932007555B6 /* StockTradingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		70B9C918294688E300C8D595 /* StockTrading Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70B9C926294688E500C8D595 /* Build configuration list for PBXNativeTarget "StockTrading Watch App" */;
+			buildPhases = (
+				70B9C915294688E300C8D595 /* Sources */,
+				70B9C916294688E300C8D595 /* Frameworks */,
+				70B9C917294688E300C8D595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StockTrading Watch App";
+			productName = "StockTrading Watch App";
+			productReference = 70B9C919294688E300C8D595 /* StockTrading Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -298,11 +359,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					58ED8EA828EE0932007555B6 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					70B9C918294688E300C8D595 = {
+						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
@@ -323,6 +387,7 @@
 			projectRoot = "";
 			targets = (
 				58ED8EA828EE0932007555B6 /* StockTradingApp */,
+				70B9C918294688E300C8D595 /* StockTrading Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -335,6 +400,15 @@
 				58ED8EB428EE0932007555B6 /* Preview Assets.xcassets in Resources */,
 				58ED8EB128EE0932007555B6 /* Assets.xcassets in Resources */,
 				588598DE2929D41E006FC002 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B9C917294688E300C8D595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B9C923294688E500C8D595 /* Preview Assets.xcassets in Resources */,
+				70B9C920294688E500C8D595 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +448,22 @@
 				58C88DDC293D1BD300930178 /* AssetService.swift in Sources */,
 				58C88DBE2932BCC600930178 /* SignInView.swift in Sources */,
 				58C88D872931BD9900930178 /* RippleAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B9C915294688E300C8D595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B9C92A2946892000C8D595 /* NetworkModel.swift in Sources */,
+				70B9C92D2946894700C8D595 /* HomeViewModel.swift in Sources */,
+				70B9C9292946891E00C8D595 /* AssetService.swift in Sources */,
+				70B9C92B2946892200C8D595 /* MarketTabModel.swift in Sources */,
+				70B9C91E294688E300C8D595 /* ContentView.swift in Sources */,
+				70B9C9272946891A00C8D595 /* EquityModel.swift in Sources */,
+				70B9C92C2946894400C8D595 /* AssetImageView.swift in Sources */,
+				70B9C9282946891C00C8D595 /* CryptoModel.swift in Sources */,
+				70B9C91C294688E300C8D595 /* StockTradingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +644,66 @@
 			};
 			name = Release;
 		};
+		70B9C924294688E500C8D595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StockTrading Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StockTrading;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		70B9C925294688E500C8D595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"StockTrading Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = StockTrading;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -571,6 +721,15 @@
 			buildConfigurations = (
 				58ED8EB828EE0932007555B6 /* Debug */,
 				58ED8EB928EE0932007555B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70B9C926294688E500C8D595 /* Build configuration list for PBXNativeTarget "StockTrading Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70B9C924294688E500C8D595 /* Debug */,
+				70B9C925294688E500C8D595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
