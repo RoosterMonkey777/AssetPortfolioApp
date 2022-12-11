@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5819928129455D9600C4C764 /* UserPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5819928029455D9600C4C764 /* UserPortfolioView.swift */; };
+		58199283294642F100C4C764 /* AssetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58199282294642F100C4C764 /* AssetIconView.swift */; };
 		588598DE2929D41E006FC002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 588598DD2929D41E006FC002 /* GoogleService-Info.plist */; };
 		588598E12929D52A006FC002 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E02929D52A006FC002 /* FirebaseAnalytics */; };
 		588598E32929D52A006FC002 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 588598E22929D52A006FC002 /* FirebaseAnalyticsSwift */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5819928029455D9600C4C764 /* UserPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPortfolioView.swift; sourceTree = "<group>"; };
+		58199282294642F100C4C764 /* AssetIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetIconView.swift; sourceTree = "<group>"; };
 		588598DD2929D41E006FC002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		588598E8292AABB0006FC002 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		588598EA292AAC47006FC002 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				58C88DD72937C7C600930178 /* SearchBarView.swift */,
 				58C88DE1293D578900930178 /* MarketTabView.swift */,
 				58C88DE3293D689A00930178 /* MarketTabFullView.swift */,
+				58199282294642F100C4C764 /* AssetIconView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				588598F4292AB111006FC002 /* UserProfileView.swift */,
 				58C88DC22932BDBF00930178 /* HomeView.swift */,
 				58C88DCA2935653300930178 /* CryptoRowView.swift */,
+				5819928029455D9600C4C764 /* UserPortfolioView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				588598F5292AB111006FC002 /* UserProfileView.swift in Sources */,
 				58C88DCD2935941400930178 /* HomeViewModel.swift in Sources */,
 				58C88DE4293D689A00930178 /* MarketTabFullView.swift in Sources */,
+				5819928129455D9600C4C764 /* UserPortfolioView.swift in Sources */,
 				58C88D7729312C7600930178 /* AppExtensions.swift in Sources */,
 				58C88DE2293D578900930178 /* MarketTabView.swift in Sources */,
 				58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */,
@@ -358,6 +365,7 @@
 				58C88DCB2935653300930178 /* CryptoRowView.swift in Sources */,
 				588598E9292AABB0006FC002 /* AuthenticatedView.swift in Sources */,
 				58C88DCF2936D9DE00930178 /* AssetImageView.swift in Sources */,
+				58199283294642F100C4C764 /* AssetIconView.swift in Sources */,
 				58C88DC9293542FE00930178 /* CryptoModel.swift in Sources */,
 				588598EB292AAC47006FC002 /* HomePageView.swift in Sources */,
 				58C88DC12932BD0C00930178 /* ViewRouter.swift in Sources */,

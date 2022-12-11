@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var viewRouter: ViewRouter
     
     @State private var showPortfolio : Bool = true
+    @State private var showUserPortflioSheet : Bool = false
     @State private var showSearchBar : Bool = false
     @State private var showMarketTab : Bool = true
     @State private var rippleAnimation : Bool = false
@@ -88,7 +89,8 @@ struct HomeView: View {
                      
                      Spacer(minLength: 0)
                 }
-                .sheet(isPresented: $showUserProfile){UserProfileView()} //show user profile
+                .sheet(isPresented: $showUserProfile){UserProfileView().environmentObject(homeViewModel)} //show user profile
+                .sheet(isPresented: $showUserPortflioSheet){UserPortfolioView().environmentObject(homeViewModel)} // show the users portfolio
                 
                 VStack {
                     Spacer()
@@ -128,6 +130,9 @@ extension HomeView {
                     .onTapGesture {
                         if showPortfolio{
                             showUserProfile.toggle()
+                        }
+                        else {
+                            showUserPortflioSheet.toggle()
                         }
                         
                     }
