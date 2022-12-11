@@ -11,8 +11,8 @@ struct UserPortfolioView: View {
     
     @Environment(\.presentationMode) var pm
     @EnvironmentObject private var viewModel : HomeViewModel
-    
-    
+    @State var selectedAsset : CryptoModel? = nil
+    @State var quantity : String = "0"
     var body: some View {
         NavigationView{
             ScrollView {
@@ -33,39 +33,95 @@ struct UserPortfolioView: View {
                                    
                                     ZStack{
                                         RoundedRectangle(cornerRadius: 25.0)
-                                            .fill(Color.theme.background)
+                                            .fill(selectedAsset?.id == asset.id ? Color.theme.secondary : Color.theme.background)
                                             .frame(maxWidth: 120, minHeight: 120)
                                             .shadow(color:Color.theme.alien,radius: 5)
                                         
                                         VStack(alignment: .center, spacing: 15){
-                                           
-                                            
-                                                
-                                                    
                                                 Text(asset.symbol.uppercased())
                                                     .font(.headline)
                                                     .padding(.leading, 6)
                                                     .foregroundColor(Color.theme.primary)
-                                            
-                                            
+  
                                             AssetImageView(urlString: asset.image, data: nil)
                                                 .frame(width: 50, height: 50)
                                                 .padding(.horizontal)
-                            
-                                            
-                                            
+                                                                
                                         }
                                         
                                     }
                                     .padding()
-                                        
+                                    .onTapGesture {
+                                        withAnimation(.easeIn){
+                                            selectedAsset = asset
+                                        }
+                                    }
                                 }
                             }
                         }
                         )
-                    }
-                    
-                    
+                        
+                        if selectedAsset != nil{
+                            Section("\(selectedAsset?.name.uppercased() ?? "") Statistics:", content: {
+                               
+                                VStack{
+                                   HStack{
+                                       Text("\(selectedAsset?.symbol.uppercased() ?? "") Price :")
+                                       Spacer()
+                                       Text("\(selectedAsset?.current_price.formatAssetPriceToSix() ?? "0.00") CAD")
+                                           .fontWeight(.semibold)
+                                   }.padding(.top)
+                                   
+                                   
+                                   Divider()
+                                   
+                                   HStack{
+                                       Text("\(selectedAsset?.symbol.uppercased() ?? "") Rank :")
+                                       Spacer()
+                                       Text("\(selectedAsset?.getRank ?? 0) ").fontWeight(.semibold)
+                                   }
+                                   
+                                   Divider()
+                                   
+                                   HStack{
+                                       Text("Daily Change % :")
+                                       Spacer()
+                                       Text("\(selectedAsset?.price_change_percentage_24h?.asPercentString() ?? "0%") ")
+                                           .fontWeight(.semibold)
+                                           .foregroundColor((selectedAsset?.price_change_percentage_24h ?? 0) >= 0 ? Color.theme.bull : Color.theme.bear)
+                                   }
+                                   
+                                   Divider()
+                                   
+                                  
+
+                                   
+                                   HStack{
+                                       Text("Shares Held :")
+                                       Spacer()
+                                      TextField("10", text: $quantity)
+                                           .fontWeight(.semibold)
+                                           .multilineTextAlignment(.trailing)
+                                           .keyboardType(.decimalPad)
+                                   }
+                                   
+                                   Divider()
+                                    
+                                    HStack{
+                                        Text("Position Value :")
+                                        Spacer()
+                                        Text(getAssetValue().formatAssetPriceToTwo())
+                                            .fontWeight(.heavy)
+                                    }
+                                   
+                                   
+                                   
+                                   
+                               }
+                                .animation(.none)
+                            }).padding(.horizontal).padding(.horizontal).padding(.top)
+                        }
+                    } // end Big Vstack
                 }
                 .foregroundColor(Color.theme.alien)
             }
@@ -84,9 +140,36 @@ struct UserPortfolioView: View {
                     })
                    
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button(action: {
+                        saveHoldings()
+                    }, label: {
+                        Image(systemName: "square.and.arrow.down")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.theme.primary)
+                    })
+                    .opacity( ( selectedAsset?.coinHoldings != 0 && selectedAsset != nil && selectedAsset?.coinHoldings != Double(quantity)) ?  1 : 0)
+                   
+                }
             }
         }
         
+    }
+    private func saveHoldings() {
+        guard let asset = selectedAsset
+            else {return}
+        
+        // save logic
+        selectedAsset = nil
+        viewModel.searchText = ""
+        UIApplication.shared.dismissKeyboard()
+    }
+    
+    private func getAssetValue() -> Double {
+        let userQuantity = Double(quantity)
+        return (userQuantity ?? 0) * (selectedAsset?.current_price ?? 0)
     }
 }
 

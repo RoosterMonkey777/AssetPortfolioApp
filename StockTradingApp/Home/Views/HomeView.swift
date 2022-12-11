@@ -143,15 +143,20 @@ extension HomeView {
                 
                 CircleButtonView(iconToUse: "chart.line.uptrend.xyaxis")
                     .onTapGesture {
-                        showMarketTab.toggle()
+                        withAnimation(.easeIn(duration: 0.3)){
+                            showMarketTab.toggle()
+                        }
+                        
                     }
-                    .animation(.none, value: showMarketTab)
+                    
                 
                 CircleButtonView(iconToUse: "magnifyingglass")
                     .onTapGesture {
-                        showSearchBar.toggle()
+                        withAnimation(.easeIn(duration: 0.3)){
+                            showSearchBar.toggle()
+                        }
                     }
-                    .animation(.none, value: showSearchBar)
+                   
                 
                 // button on right side
                 CircleButtonView(iconToUse: "arrow.right")
