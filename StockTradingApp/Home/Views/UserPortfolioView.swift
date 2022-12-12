@@ -164,7 +164,7 @@ struct UserPortfolioView: View {
         guard let asset = selectedAsset
         else {return}
         
-        let newAsset = AssetDBModel(coinId: (asset.id), amount: (asset.coinHoldings ?? 0))
+        let newAsset = AssetDBModel(coinId: asset.id, name: asset.name, rank: asset.getRank, symbol: asset.symbol, currentPrice: asset.current_price, dailyChangePercentage: (asset.price_change_percentage_24h ?? 0), imageString: asset.image, amount: (Double(quantity) ?? 0))
         self.fireDBHelper.insertAsset(newAsset: newAsset)
         
         

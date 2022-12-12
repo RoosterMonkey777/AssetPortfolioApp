@@ -80,11 +80,9 @@ struct HomeView: View {
                             ForEach(self.fireDBHelper.assetList){currentAsset in
 
                                 VStack(alignment: .leading){
-                                    Text("\(currentAsset.coinId)")
-                                        .fontWeight(.bold)
-
-                                    Text("by \(currentAsset.amount)")
-                                        .italic()
+                                    AssetAddedRowView(asset: currentAsset, showHoldingsColumn: true, urlString: currentAsset.imageString)
+                                        .listRowSeparator(.hidden)
+                                        
                                 }
 
                             }//ForEach
@@ -97,7 +95,10 @@ struct HomeView: View {
                                 }
                             })
                             
+                            
                         }
+                        .listStyle(.plain)
+                        .transition(.move(edge:  .leading))
                         .onAppear(){
                             //get all books from DB
                             self.fireDBHelper.getAllAssets()
