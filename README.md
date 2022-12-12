@@ -27,3 +27,6 @@ Zahaak: Responsible for API calls and incorporating the backend through the busi
 Shareef: Responsible for UI related duties and creating Watch app. Including changes in User experience, navigation through the app, and visually appealing views. 
 
 ** Roles and duties subject to change ** 
+
+# Views
+![alt text](http://url/to/img.png)

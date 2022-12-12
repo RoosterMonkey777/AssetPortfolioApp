@@ -56,6 +56,7 @@
 		581992842946889500C4C764 /* AssetDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDBModel.swift; sourceTree = "<group>"; };
 		581992862946898800C4C764 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
 		5819928B2946A8E300C4C764 /* AssetAddedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetAddedRowView.swift; sourceTree = "<group>"; };
+		5819928D2946CEBA00C4C764 /* screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshots; sourceTree = "<group>"; };
 		588598DD2929D41E006FC002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		588598F4292AB111006FC002 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		58C88D7629312C7600930178 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
@@ -221,6 +222,7 @@
 				70B9C91A294688E300C8D595 /* StockTrading Watch App */,
 				58ED8EAA28EE0932007555B6 /* Products */,
 				58ED8EBA28EE0BCC007555B6 /* README.md */,
+				5819928D2946CEBA00C4C764 /* screenshots */,
 				58ED8EAB28EE0932007555B6 /* StockTradingApp */,
 				5819928829468DA700C4C764 /* Frameworks */,
 			);
