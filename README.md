@@ -28,5 +28,8 @@ Shareef: Responsible for UI related duties and creating Watch app. Including cha
 
 ** Roles and duties subject to change ** 
 
-# Views
-![alt text](http://url/to/img.png)
+## Screenshots
+
+# Signup
+
+![Login](https://raw.githubusercontent.com/zuk101777/StockTradingApp/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.16.png?token=GHSAT0AAAAAAB3NFWMHGM3JPHEAMREQCLXUY4WS7PA)
