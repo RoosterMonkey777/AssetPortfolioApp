@@ -33,4 +33,19 @@ Shareef: Responsible for UI related duties and creating Watch app. Including cha
 ## Signin
 
 ![Login](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.16.png?raw=true)
-![Login]<img src="https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.16.png?raw=true"  width="600" height="300">
+
+## Signup
+![Signup](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.29.png?raw=true)
+
+## Home 
+![Home](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.50.png?raw=true)
+
+## User Profile
+![Profile](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.50.png?raw=true)
+
+## Live Market
+![Market](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.42.55.png?raw=true)
+
+## Portfolio
+![Portfolio]
+(https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.43.19.png?raw=true)
