@@ -1,9 +1,10 @@
-//
-//  AssetAddedRowView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-12-11.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Zahaak
+
+// the view that shows the users added list
 
 import SwiftUI
 
@@ -73,7 +74,7 @@ struct AssetAddedRowView: View {
                     Text("\(asset.currentPrice.formatAssetPriceToSix())" )
                         .bold()
                         .foregroundColor(Color.theme.primary)
-                    Text("\(asset.dailyChagePercentage) %")
+                    Text("\(asset.dailyChagePercentage.asPercentString()) %")
                         .foregroundColor(
                             (asset.dailyChagePercentage) <= 0 ?
                             Color.theme.bear :

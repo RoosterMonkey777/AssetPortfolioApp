@@ -1,9 +1,10 @@
-//
-//  NetworkModel.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-12-04.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Zahaak
+
+// handle all api networking stuff because multiple api calls are being made so better to have this class.
 
 import Foundation
 import Combine

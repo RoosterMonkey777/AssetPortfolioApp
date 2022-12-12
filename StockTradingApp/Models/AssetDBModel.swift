@@ -1,9 +1,10 @@
-//
-//  AssetDBModel.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-12-11.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Zahaak
+
+// an asset that the user can add to their portfolio
 
 import Foundation
 import FirebaseFirestoreSwift

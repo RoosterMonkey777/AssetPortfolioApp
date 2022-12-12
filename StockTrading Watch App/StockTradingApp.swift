@@ -1,9 +1,10 @@
-//
-//  StockTradingApp.swift
-//  StockTrading Watch App
-//
-//  Created by user226655 on 12/11/22.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+//worked on by Shareef
+
+// main view of the watchos app
 
 import SwiftUI
 

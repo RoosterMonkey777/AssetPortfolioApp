@@ -1,9 +1,10 @@
-//
-//  AssetImageView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-29.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Shareef
+
+// geting image from data
 
 import SwiftUI
 

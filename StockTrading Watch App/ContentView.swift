@@ -1,9 +1,10 @@
-//
-//  ContentView.swift
-//  StockTrading Watch App
-//
-//  Created by user226655 on 12/11/22.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Shareef
+
+// the view and logic associated with displaying api information on the watch
 
 import SwiftUI
 

@@ -26,10 +26,10 @@ struct MarketTabFullView: View {
                alignment: showPortfolio ? .leading : .trailing)
     }
 }
-
-struct MarketTabFullView_Previews: PreviewProvider {
-    static var previews: some View {
-        MarketTabFullView(showPortfolio: .constant(false))
-            .environmentObject(shared_dev.homeVM)
-    }
-}
+//
+//struct MarketTabFullView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MarketTabFullView(showPortfolio: .constant(false))
+//            .environmentObject(shared_dev.homeVM)
+//    }
+//}

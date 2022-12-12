@@ -1,9 +1,10 @@
-//
-//  HomeViewModel.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-28.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// Worked on by Zahaak
+
+// This consists of helper functions that call api the apis and set up a viewmodel for the home screen
 import SwiftUI
 import Foundation
 import UIKit
@@ -31,10 +32,10 @@ class HomeViewModel: ObservableObject {
     @Published var portfolioWatchCryptoCurrencies : [CryptoModel] = []
     
     @Published var  markets : [MarketTabModel] = [
-        MarketTabModel(header: "title 1", val: "value 1", percChange: 10.0),
-        MarketTabModel(header: "title 2", val: "value 2"),
-        MarketTabModel(header: "title 3", val: "value 3", percChange: -13.2),
-        MarketTabModel(header: "title 4", val: "value 4", percChange: 3.2)
+        MarketTabModel(header: "AAPL", val: "$142.16", percChange: -0.34),
+        MarketTabModel(header: "S&P 500", val: "$3,934.38", percChange: -0.73),
+        MarketTabModel(header: "MSFT", val: "$245.42", percChange: 0.8),
+        MarketTabModel(header: "NASDAQ", val: "$11,004.62", percChange: 0.70)
     ]
     
     init() {

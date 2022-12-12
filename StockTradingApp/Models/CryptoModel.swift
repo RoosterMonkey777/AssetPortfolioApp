@@ -1,48 +1,11 @@
-// API URL to get coin data : https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h
-/*
- { Sample json res:
- 
-     "id": "ethereum",
-     "symbol": "eth",
-     "name": "Ethereum",
-     "image": "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880",
-     "current_price": 1576.85,
-     "market_cap": 190016249005,
-     "market_cap_rank": 2,
-     "fully_diluted_valuation": 190016249005,
-     "total_volume": 9058617122,
-     "high_24h": 1631.57,
-     "low_24h": 1556.3,
-     "price_change_24h": -49.3999837537317,
-     "price_change_percentage_24h": -3.03765,
-     "market_cap_change_24h": -6517460797.61322,
-     "market_cap_change_percentage_24h": -3.31621,
-     "circulating_supply": 120519279.806846,
-     "total_supply": 120519279.806846,
-     "max_supply": null,
-     "ath": 6108.18,
-     "ath_change_percentage": -74.18339,
-     "ath_date": "2021-12-01T08:38:24.623Z",
-     "atl": 0.561954,
-     "atl_change_percentage": 280514.8063,
-     "atl_date": "2015-10-20T00:00:00.000Z",
-     "roi": {
-       "times": 95.62968594362573,
-       "currency": "btc",
-       "percentage": 9562.968594362574
-     },
-     "last_updated": "2022-11-28T19:40:47.923Z",
-     "sparkline_in_7d": {
-       "price": [
-         1110.6282618641987,
-         1103.2095169168558,
-       ]
-     },
-     "price_change_percentage_24h_in_currency": -3.0376536497892848
-   }
- 
- 
- */
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Zahaak
+
+// a model of cryptocurrency recieved from api
+
 import Foundation
 
 struct CryptoModel : Identifiable, Codable {
@@ -147,17 +110,16 @@ struct CryptoModel : Identifiable, Codable {
         )
     }
 
+    // get the rank of the coin
     var getRank : Int {
         return Int(market_cap_rank ?? 0)
     }
 
+    // get the current price of the coin and multiply by the amount held
     var currentCoinHoldingsValue : Double {
         return current_price  * (coinHoldings ?? 0)
     }
     
-//    func updateCoin() -> CryptoModel{
-//        return CryptoModel(id: id, symbol: symbol, name: name)
-//    }
 }
 
 struct SparklineIn7D : Codable {

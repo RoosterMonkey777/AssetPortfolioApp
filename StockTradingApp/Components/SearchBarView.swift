@@ -1,9 +1,10 @@
-//
-//  SearchBarView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-11-30.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Zahaak
+
+// a search bar view
 
 import SwiftUI
 

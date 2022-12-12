@@ -35,8 +35,8 @@ struct MarketTabView: View {
     }
 }
 
-struct MarketTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        MarketTabView(holder: shared_dev.holder2)
-    }
-}
+//struct MarketTabView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MarketTabView(holder: shared_dev.holder2)
+//    }
+//}

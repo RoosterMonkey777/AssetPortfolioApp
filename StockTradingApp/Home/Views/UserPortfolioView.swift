@@ -1,9 +1,10 @@
-//
-//  UserPortfolioView.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-12-10.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by zahaak
+
+// the users portfolio screen where they can browse and add assets
 
 import SwiftUI
 
@@ -182,9 +183,9 @@ struct UserPortfolioView: View {
     }
 }
 
-struct UserPortfolioView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserPortfolioView()
-            .environmentObject(shared_dev.homeVM)
-    }
-}
+//struct UserPortfolioView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserPortfolioView()
+//            .environmentObject(shared_dev.homeVM)
+//    }
+//}

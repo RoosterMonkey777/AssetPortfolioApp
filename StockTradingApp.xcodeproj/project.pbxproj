@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5819928129455D9600C4C764 /* UserPortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5819928029455D9600C4C764 /* UserPortfolioView.swift */; };
-		58199283294642F100C4C764 /* AssetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58199282294642F100C4C764 /* AssetIconView.swift */; };
 		581992852946889500C4C764 /* AssetDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581992842946889500C4C764 /* AssetDBModel.swift */; };
 		581992872946898800C4C764 /* FireDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581992862946898800C4C764 /* FireDBHelper.swift */; };
 		5819928A29468DA700C4C764 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5819928929468DA700C4C764 /* FirebaseFirestoreSwift */; };
@@ -27,7 +26,6 @@
 		58C88DBE2932BCC600930178 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DBD2932BCC600930178 /* SignInView.swift */; };
 		58C88DC12932BD0C00930178 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC02932BD0C00930178 /* ViewRouter.swift */; };
 		58C88DC32932BDBF00930178 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC22932BDBF00930178 /* HomeView.swift */; };
-		58C88DC62932FD2500930178 /* EquityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC52932FD2500930178 /* EquityModel.swift */; };
 		58C88DC9293542FE00930178 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC8293542FE00930178 /* CryptoModel.swift */; };
 		58C88DCB2935653300930178 /* CryptoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCA2935653300930178 /* CryptoRowView.swift */; };
 		58C88DCD2935941400930178 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DCC2935941400930178 /* HomeViewModel.swift */; };
@@ -45,7 +43,6 @@
 		70B9C91E294688E300C8D595 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9C91D294688E300C8D595 /* ContentView.swift */; };
 		70B9C920294688E500C8D595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B9C91F294688E500C8D595 /* Assets.xcassets */; };
 		70B9C923294688E500C8D595 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B9C922294688E500C8D595 /* Preview Assets.xcassets */; };
-		70B9C9272946891A00C8D595 /* EquityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC52932FD2500930178 /* EquityModel.swift */; };
 		70B9C9282946891C00C8D595 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DC8293542FE00930178 /* CryptoModel.swift */; };
 		70B9C9292946891E00C8D595 /* AssetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDB293D1BD300930178 /* AssetService.swift */; };
 		70B9C92A2946892000C8D595 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C88DDD293D340200930178 /* NetworkModel.swift */; };
@@ -56,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		5819928029455D9600C4C764 /* UserPortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPortfolioView.swift; sourceTree = "<group>"; };
-		58199282294642F100C4C764 /* AssetIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetIconView.swift; sourceTree = "<group>"; };
 		581992842946889500C4C764 /* AssetDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDBModel.swift; sourceTree = "<group>"; };
 		581992862946898800C4C764 /* FireDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDBHelper.swift; sourceTree = "<group>"; };
 		5819928B2946A8E300C4C764 /* AssetAddedRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetAddedRowView.swift; sourceTree = "<group>"; };
@@ -70,7 +66,6 @@
 		58C88DBD2932BCC600930178 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		58C88DC02932BD0C00930178 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		58C88DC22932BDBF00930178 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		58C88DC52932FD2500930178 /* EquityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquityModel.swift; sourceTree = "<group>"; };
 		58C88DC8293542FE00930178 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		58C88DCA2935653300930178 /* CryptoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRowView.swift; sourceTree = "<group>"; };
 		58C88DCC2935941400930178 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -139,7 +134,6 @@
 				58C88DD72937C7C600930178 /* SearchBarView.swift */,
 				58C88DE1293D578900930178 /* MarketTabView.swift */,
 				58C88DE3293D689A00930178 /* MarketTabFullView.swift */,
-				58199282294642F100C4C764 /* AssetIconView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -211,7 +205,6 @@
 		58C88DC42932FD1300930178 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				58C88DC52932FD2500930178 /* EquityModel.swift */,
 				58C88DC8293542FE00930178 /* CryptoModel.swift */,
 				58C88DDB293D1BD300930178 /* AssetService.swift */,
 				58C88DDD293D340200930178 /* NetworkModel.swift */,
@@ -408,13 +401,11 @@
 				58C88DE2293D578900930178 /* MarketTabView.swift in Sources */,
 				58C88D7F29313EC300930178 /* CircleButtonView.swift in Sources */,
 				58C88DE0293D4B7500930178 /* MarketTabModel.swift in Sources */,
-				58C88DC62932FD2500930178 /* EquityModel.swift in Sources */,
 				58C88DC32932BDBF00930178 /* HomeView.swift in Sources */,
 				58C88DCB2935653300930178 /* CryptoRowView.swift in Sources */,
 				581992872946898800C4C764 /* FireDBHelper.swift in Sources */,
 				58C88DCF2936D9DE00930178 /* AssetImageView.swift in Sources */,
 				581992852946889500C4C764 /* AssetDBModel.swift in Sources */,
-				58199283294642F100C4C764 /* AssetIconView.swift in Sources */,
 				5819928C2946A8E300C4C764 /* AssetAddedRowView.swift in Sources */,
 				58C88DC9293542FE00930178 /* CryptoModel.swift in Sources */,
 				58C88DC12932BD0C00930178 /* ViewRouter.swift in Sources */,
@@ -435,7 +426,6 @@
 				70B9C9292946891E00C8D595 /* AssetService.swift in Sources */,
 				70B9C92B2946892200C8D595 /* MarketTabModel.swift in Sources */,
 				70B9C91E294688E300C8D595 /* ContentView.swift in Sources */,
-				70B9C9272946891A00C8D595 /* EquityModel.swift in Sources */,
 				70B9C92C2946894400C8D595 /* AssetImageView.swift in Sources */,
 				70B9C9282946891C00C8D595 /* CryptoModel.swift in Sources */,
 				70B9C91C294688E300C8D595 /* StockTradingApp.swift in Sources */,

@@ -1,4 +1,10 @@
-////  View for letting users sign into their acccount through firebase authentication
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// worked on by Zahaak
+
+//  View for letting users sign into their acccount through firebase authentication
 
 import SwiftUI
 import Firebase

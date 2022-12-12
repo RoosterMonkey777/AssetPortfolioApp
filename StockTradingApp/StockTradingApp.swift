@@ -1,3 +1,7 @@
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
 /* App main */
 
 import SwiftUI

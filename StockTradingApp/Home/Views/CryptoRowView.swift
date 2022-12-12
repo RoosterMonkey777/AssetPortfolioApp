@@ -1,3 +1,11 @@
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// workded on by Shareef
+
+// A single row in the list of assets.
+
 import SwiftUI
 
 struct CryptoRowView: View {

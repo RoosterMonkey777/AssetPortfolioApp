@@ -1,3 +1,9 @@
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// workded on by Zahaak
+
 // checks which state the app is in to determine authentcaion state
 
 import SwiftUI

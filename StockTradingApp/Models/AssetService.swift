@@ -1,9 +1,8 @@
-//
-//  AssetService.swift
-//  StockTradingApp
-//
-//  Created by Zahaak Khan on 2022-12-04.
-//
+// Group# 12
+// Zahaak Khan : 991625231
+// Shareef Aldahhan : 991598634
+
+// get the api data through subscribing
 
 import Foundation
 import Combine
@@ -11,7 +10,6 @@ import Combine
 class AssetService  {
     
     @Published var allCoins : [CryptoModel] = []
-    // var cancellables = Set<AnyCancellable>()
     var assetsub : AnyCancellable?
     
     init() {
@@ -29,31 +27,6 @@ class AssetService  {
                 self?.assetsub?.cancel()
             })
         
-        
-//        assetsub = URLSession.shared.dataTaskPublisher(for: url)
-//            .subscribe(on: DispatchQueue.global(qos: .default))
-//            .tryMap{ (output) -> Data in
-//                guard let response = output.response as? HTTPURLResponse,
-//                      response.statusCode >= 200 && response.statusCode < 300 else {
-//                    throw URLError(.badServerResponse)
-//                }
-//                return output.data
-//            }
-//            .receive(on: DispatchQueue.main)
-//            .decode(type: [CryptoModel].self, decoder: JSONDecoder())
-//            .sink{ (completion) in
-//                switch completion {
-//                case .finished:
-//                    break
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//
-//                }
-//
-//            } receiveValue: { [weak self] returnedCoins in
-//                self?.allCoins = returnedCoins
-//                self?.assetsub?.cancel()
-//            }
     }
     
     

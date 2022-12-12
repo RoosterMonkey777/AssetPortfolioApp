@@ -20,5 +20,4 @@ struct MarketTabModel : Identifiable {
         self.percChange = percChange
     }
     
-    //let newModel = MarketTabModel(header: "", val: "", percChange: 45)
 }
