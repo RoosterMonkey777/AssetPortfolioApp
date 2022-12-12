@@ -33,4 +33,4 @@ Shareef: Responsible for UI related duties and creating Watch app. Including cha
 ## Signin
 
 ![Login](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.16.png?raw=true)
-<img src="https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.16.png?raw=true"  width="600" height="300">
+![Login]<img src="https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.41.16.png?raw=true"  width="600" height="300">
