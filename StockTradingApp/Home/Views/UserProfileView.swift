@@ -30,6 +30,10 @@ struct UserProfileView : View {
             viewRouter.currentPage = .signInPage
         }
     }
+    private func showUserName() {
+        let firebaseAuth = Auth.auth().currentUser?.email
+        
+    }
     private func deleteUser(){
         deleteProcessing = true
         let user = Auth.auth().currentUser
@@ -70,7 +74,7 @@ struct UserProfileView : View {
                     }
                     .listRowBackground(Color(UIColor.systemGroupedBackground))
                     Section("Email") {
-                        Text("email goes here")
+                        Text(Auth.auth().currentUser?.email ?? "")
                     }
                     Section {
                         Button(role: .cancel, action: signOutUser) {
@@ -171,12 +175,12 @@ struct UserProfileView : View {
 //        }
 //    }
 //}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            UserProfileView()
-                .environmentObject(AuthenticationViewModel())
-        }
-    }
-}
+//
+//struct UserProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            UserProfileView()
+//                .environmentObject(AuthenticationViewModel())
+//        }
+//    }
+//}

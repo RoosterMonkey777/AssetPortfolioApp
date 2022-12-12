@@ -59,11 +59,9 @@ struct AssetAddedRowView: View {
                 // middle column if applicable
                 if showHoldingsColumn {
                     VStack(alignment: .trailing){
+                        Text("\(asset.amount.formatSharesHeld())")
                         Text(asset.currentCoinHoldingsValue.formatAssetPriceToTwo())
                             .bold()
-                        Text((asset.amount).formatAssetPriceToSix())
-
-
                     }
                     .foregroundColor(Color.theme.primary)
 

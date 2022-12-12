@@ -20,6 +20,23 @@ struct ColorTheme {
 // for custom currency
 extension Double {
     
+    
+    private var sharedHeld : NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.locale = .current
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .decimal
+        
+        return formatter
+    }
+    
+    func formatSharesHeld() -> String {
+        let number = NSNumber(value: self)
+        return sharedHeld.string(from: number) ?? "0"
+    }
+    
     private var currencyFormatter2 : NumberFormatter {
         let formatter = NumberFormatter()
         formatter.minimumFractionDigits = 2
