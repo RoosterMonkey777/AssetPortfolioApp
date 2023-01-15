@@ -40,4 +40,10 @@ For now we are going to try to implement these functionalities in our MVP as we 
 ![Portfolio](https://github.com/zuk101777/StockTradingApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202022-12-11%20at%2021.43.19.png?raw=true)
 
 ## Dark Mode 
-![Dakr theme 1](https://github.com/zuk101777/AssetPortfolioApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-01-15%20at%2013.44.02.png)
+![Dark theme 1](https://github.com/zuk101777/AssetPortfolioApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-01-15%20at%2013.44.02.png)
+
+![Dark theme 2](https://github.com/zuk101777/AssetPortfolioApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-01-15%20at%2013.44.29.png)
+
+![Dark theme 3](https://github.com/zuk101777/AssetPortfolioApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-01-15%20at%2013.45.21.png)
+
+![Dark theme 4](https://github.com/zuk101777/AssetPortfolioApp/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-01-15%20at%2013.46.09.png)
