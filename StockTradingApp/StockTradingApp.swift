@@ -10,10 +10,8 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseFirestore
 
-
 @main
 struct StockTradingApp: App {
-
     
     @StateObject var homeViewModel = HomeViewModel.shared
     @StateObject var viewRouter = ViewRouter()
